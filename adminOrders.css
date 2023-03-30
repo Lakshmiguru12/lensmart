@@ -176,12 +176,12 @@
     color: var(--text-grey);    
     /* font-size: 2rem; */
 }
-.card-single:last-child{
+.card-single:nth-child(2){
     background: var(--color-dark);
 }
- .card-single:last-child h2,
-.card-single:last-child div:first-child,
-.card-single:last-child div:last-child span {
+ .card-single:nth-child(2) h2,
+.card-single:nth-child(2) div:first-child,
+.card-single:nth-child(2) div:last-child span {
     color: #fff;    
 }
 
@@ -275,19 +275,80 @@ tr td:last-child{
 
 
 @media only screen and (max-width: 1200px) {
+    
     .recent-grid{
-        grid-template-columns: 50% 50% 
+        grid-template-columns: 60% 40%; 
     }
     
 }
 
 
 @media only screen and (max-width: 960px){
-    .cards{
-        grid-template-columns: repeat(3,1fr);
+    cards{
+        grid-template-columns: repeat(2,1fr);
     }
     .recent-grid{
-        grid-template-columns: 60% 40% 
+        grid-template-columns: 100% 
+    }
+    .search-wrapper{
+        display: none;
+    }
+    .sidebar{
+        left: -100% !important;
+    }
+    #secondHeader h2{
+        display: flex;
+        align-items: center;
+    }
+    #secondHeader h2 label{
+        display: inline-block;
+        background: var(--color-dark);
+        margin-left: 0rem;
+        margin-right: 1rem;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center !important;
+        align-items: center;
+    }
+    #secondHeader h2  span{
+        text-align: center;
+        padding-right: 0rem;
+    }
+    #secondHeader h2{
+        font-size: 1.1rem;
+    }
+    .main-content{
+        width: 100%;
+        margin-left: 0rem;
+    }
+    #secondHeader{
+        width: 100% !important;
+        left: 0 !important;
+    }
+    #nav-toggle:checked + .sidebar{
+        left: 0 !important;
+        z-index: 100;
+        width: 345px;
+
+    }
+    #nav-toggle:checked + .sidebar .sidebar-brand,
+    #nav-toggle:checked + .sidebar li {
+        padding-left: 2rem;
+        text-align: left;
+    }
+    #nav-toggle:checked + .sidebar li a {
+        padding-left: 1rem;
+    }
+    #nav-toggle:checked + .sidebar .sidebar-brand h2 span:last-child,
+    #nav-toggle:checked + .sidebar li a span:last-child{
+        display: inline;
+    }
+    #nav-toggle:checked ~ .main-content{
+        margin-left: 0rem !important;
     }
 }
 

@@ -176,12 +176,12 @@
     color: var(--text-grey);    
     /* font-size: 2rem; */
 }
-.card-single:last-child{
+.card-single:nth-child(1){
     background: var(--color-dark);
 }
- .card-single:last-child h2,
-.card-single:last-child div:first-child,
-.card-single:last-child div:last-child span {
+ .card-single:nth-child(1),
+.card-single:nth-child(1) div:first-child,
+.card-single:nth-child(1) div:last-child span {
     color: #fff;    
 }
 
@@ -278,7 +278,6 @@ tr td:last-child{
     .recent-grid{
         grid-template-columns: 50% 50% 
     }
-    
 }
 
 
