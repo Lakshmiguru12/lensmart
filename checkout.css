@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Helvetica,Arial,sans-serif;
+}
+   
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+  }
+  
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  
+  li {
+    margin-top: -55px;
+    margin-bottom: -55px;
+    
+  }
+  
+  img {
+    max-width: 100%;
+    height: 150px;
+  }
+
+ #container {
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid black;
+    height: 100%;
+ }
+
+  #leftcontain {
+    
+    width: 60%;
+    margin-left: 150px;
+    margin-top: 30px;
+    /* border: 1px solid yellow; */
+    margin-right: 30px;
+    height: 800px;
+}
+
+#rightcontain {
+    /* border: 1px solid red; */
+    width: 30vw;
+    height: 300px;
+    margin-top: 30px;
+    
+}
+
+.left1 {
+    width: 100%;
+    display: flex;
+
+    
+    
+}
+.left1 div{
+    width: 30%;
+    height: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: grey;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 15px;
+ 
+}
+.left1 span{
+    height: 20px;
+width: 20px;
+background-color: #FFFFFF;
+color: black;
+border-radius: 50%;
+display: inline-block;
+margin-right: 10px;
+}
+
+.left2 {
+    background: none repeat scroll 0 0 #f5fff7;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    margin-top: 10px;
+}
+
+.left3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #329c92;
+    padding: 10px 10px 8px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 0;
+}
+
+.left4 {
+    border: 1px solid rgba(60,60,60,.54);
+    border-radius: 8px;
+    padding: 22px;
+    margin: 22px 0;
+    height: 550px;
+}
+
+.left4 button {
+    background-color: #00b9c6;
+    border-radius: 5px;
+    height: 40px;
+    border: none;
+    width: 140px;
+    font-size: 14px;
+    text-shadow: 1px 1px rgba(0,0,0,.25);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff!important;
+    float: left;
+    line-height: 16px;
+    margin-left: 550px;
+    
+}
+button:hover {
+    cursor: pointer;
+  }
+
+.namebox {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    margin-top: 70px;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    gap: 20px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input[type="text"] {
+    font-size: 16px;
+    padding: 10px;
+    width: 300px;
+    font-family: inherit;
+  }
+  input[type="number"] {
+    font-size: 16px;
+    padding: 10px;
+    width: 300px;
+    font-family: inherit;
+  }
+  input[type="email"] {
+    font-size: 16px;
+    padding: 10px;
+    width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #gender {
+    margin-left: 30px;
+    display: flex;
+    gap: 20px;
+  }
+
+  .inpbox1 {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    gap: 20px;
+    font-size: 15px;
+  }
+  .inpbox2 {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    gap: 20px;
+    font-size: 15px;
+  }
+  .inpbox3 {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    gap: 20px;
+    font-size: 15px;
+  }
+  .inpbox4 {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    gap: 20px;
+    font-size: 15px;
+  }
