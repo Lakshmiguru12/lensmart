@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?? family-Poppins: wght@300; 400;500; 600&display=swap');
+@import url('https://db.onlinewebfonts.com/c/6e390d15863032277a741e08a6b18ce2?family=Futura+Std+Medium');
 :root {
 --main-color: #00b5a5;
 --color-dark: #010045;
@@ -151,6 +152,7 @@
     padding: 2rem 1.5rem;
     background: #f5f5f5;
     min-height: calc(100vh - 90px);
+    position: relative;
 }
 .cards{
     display: grid;
@@ -246,22 +248,62 @@ tr td:last-child{
 .table-responsive{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 10px;
+    justify-content: center;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: auto;
+    row-gap: 3rem;
     overflow: auto;
 }
 .small-cards{
+    display: flex;
+    /* cursor: pointer; */
+    height: 25vh;
+    /* justify-content: space-around; */
     width: 90%;
     border-radius: 10px;
-    background-color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-dark);
+    border: .5px solid#ebebeb;
+    background-color: #ffff;
+}
+.small-cards:hover{
     box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 10px;
 }
 .small-cards img{
-    width: 100%;
+    height: 100%;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
-
+.small-cards div:nth-child(2){
+    margin: 2rem;
+    /* text-align: center; */
+}
+.la-rupee-sign{
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 700;
+}
+.small-cards >div{
+width: 100%;
+}
+.small-cards button{
+    width: 90%;
+    padding-top: 0.6rem;
+    margin-top: 1rem;
+    /* font-family: "Futura Std Medium"; */
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffff;
+    padding-bottom: 0.6rem;
+}
+.small-cards button:hover{
+    color: var(--main-color);
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+}
 /* css for product cards */
 
 
@@ -305,11 +347,56 @@ tr td:last-child{
     margin-left: 0.2rem;
 }
 /* media queries */
-
+#signup-box{
+    display: none;
+    padding: 1rem;
+    color: var(--color-dark);
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    background-position: center;
+    justify-content: center;
+    left: 30vw;
+    right: 20vw;
+    top: 300px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+#signup-box h1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+#cross{
+    cursor: pointer;
+}
+#signup-box form input,#signup-box form select{
+    /* width: 100%; */
+    padding: 8px;
+    border: none;
+    border: 1px solid var(--color-dark);
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 10px;
+}
+#signup-box form input:focus,#signup-box form select:focus{
+    border-color:  var(--main-color);
+    outline: none;
+    box-shadow: 0 0 8px 0 var(--main-color);
+}
+#submit{
+    width: 90%;
+    border-radius: 5px;
+    background-color: var(--color-dark);
+    color: #ffff;
+    cursor: pointer;
+    border: none;
+}
 @media only screen and (max-width: 1200px) {
-    /* .recent-grid{
-        grid-template-columns: 50% 50% 
-    } */
+    .table-responsive{
+        display: grid;
+        grid-template-columns : 100%;
+    }
    
 }
 
@@ -392,7 +479,24 @@ tr td:last-child{
     }
 }
 
-@media only screen and (max-width: 560px){
+@media only screen and (max-width: 570px){
+    .table-responsive{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .small-cards{
+        width: 100%;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        margin: auto;
+        font-size: 10px;
+        /* text-align: center; */
+    }
+    .small-cards img{
+        width: 100%;
+        height: auto;
+    }
     .cards{
         grid-template-columns: 100%;
     }

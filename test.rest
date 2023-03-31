@@ -1,4 +1,28 @@
 ###
-GET  https://lensmart-backend3-0.onrender.com/products/123
-
+DELETE https://lensmart-backend3-0.onrender.com/products/lsL6KXxED6
 Content-Type: application/json
+
+# {
+#     "brandName": "LensKart Air",
+#     "title": "Blue Sky Full Rim Hustlr Eyeglasses",
+#     "frameSize": "Medium",
+#     "price": "4000",
+#     "discountedPrice": "2700",
+#     "frameType": "Full Rim",
+#     "frameShape": "Square",
+#     "frameColor": "Grey",
+#     "gender": "male",
+#     "frameImg": "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/blue-sky-full-rim-hustlr-eyeglasses_eyeglasses_csvfile-1671778448401-air_blue-transparent-full-rim-square-lenskar_28_12_2022.jpg",
+#     "frameImg1": "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/peyush-bansal-shark-tank-blue-sky-full-rim-hustlr-eyeglasses_g_603130_dec22.jpg",
+#     "maleModelImg": "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/peyush-bansal-shark-tank-blue-sky-full-rim-hustlr-eyeglasses_hustlr_la_pid_207481_(piero)_11204_00695_30_dec_2022.jpg",
+#     "femaleModelImg": "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/blue-sky-full-rim-hustlr-eyeglasses_csvfile-1672123351499-hustlr_la_pid_207481_(f)_25240_00576.jpg",
+#     "material": "Cellulose Acetate",
+#     "weightGroup": "Light",
+#     "collection": "Sleek Steel",
+#     "glassColor": "Blue",
+#     "frameWidth": "139 mm",
+#     "productType": "Eyeglasses",
+#     "ModelNo": "LA E1517",
+#     "frameDimensions": "50-20-145",
+#     "suitedFor": "UNISEX"
+#    }
