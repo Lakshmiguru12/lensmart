@@ -13,6 +13,10 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+::selection {
+    background-color: var(--main-color) !important;
+    color: var(--color-dark) !important;
+}
 .sidebar{
     width: 345px;
     position: fixed;
@@ -88,6 +92,71 @@
     /* width: 100vw; */
     /* width: calc(100vw - 345px); */
 }
+
+/* css for form  */
+#signup-box{
+    margin: 4% auto;
+    /* background-color: #fff; */
+    padding: 10px;
+    color: var(--color-dark);
+    border-radius: 3px;
+    border: 1px solid var(--color-dark);
+    border-radius: 10px;
+    padding: 1rem;
+    display: none;
+    position: fixed;
+    right: 20vw;
+    /* top: 5vh; */
+    backdrop-filter: blur(20px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    left: 20vw;
+}
+#signup-box h1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+#signup-box form input,#signup-box form select{
+    padding: 8px;
+    border: none;
+    border: 1px solid var(--color-dark);
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 10px;
+    
+}
+#signup-box form input:focus,#signup-box form select:focus{
+    border-color: var(--color-dark);
+    outline: none;
+    box-shadow: 0 0 8px 0 var(--color-dark);
+}
+#submit{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    border: none;
+    background-color: var(--color-dark);
+    color: #ffff;
+    margin: auto;
+    width: 90%;
+}
+.table-responsive>table>tbody>tr img{
+    border-radius: 5px;
+}
+.table-responsive>table{
+    text-align: center;
+}
+.table-responsive>table>tbody>tr>td>button{
+    background-color: #010045;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+/* header */
 #secondHeader{
     background: #ffff;
     display: flex;
@@ -189,7 +258,7 @@
     margin-top: 3.5rem;
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: 65% auto;
+    /* grid-template-columns: 65% auto; */
 }
 .card{
     background: #fff;
@@ -233,10 +302,6 @@ td{
     color: #222;
 }
 
-tr td:last-child{
-    display: flex;
-    align-items: center;
-}
 .order{
     display: flex;
     justify-content: space-between;

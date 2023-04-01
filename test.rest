@@ -1,13 +1,12 @@
 ###
-POST https://lensmart-backend3-0.onrender.com/users
-
+GET https://lensmart-backend3-0.onrender.com/users/:61
 Content-Type: application/json
 
-{
-    "username": "alibaba",
-    "password": "Nose",
-    "email": "ali@mail.com",
-    "firstname": "ali",
-    "lastname": "baba",
-    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/304.jpg"
-}
+# {
+#     "username": "Name",
+#     "password": "nabba",
+#     "email": "anuragjatofficial@gmail.com",
+#     "firstname": "ali",
+#     "lastname": "baba",
+#     "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/304.jpg"
+# }

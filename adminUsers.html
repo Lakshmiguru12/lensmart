@@ -45,6 +45,18 @@
             </div>
         </div>
         <div class="main-content">
+            <div id="signup-box">
+                <h1>Add Users<span class="las la-times-circle" id="cross"></span></h1>
+                <form>
+                    <input type="url" placeholder="image url (optional)" id="imageURL">
+                    <input type="email" placeholder="email" id="email" required>
+                    <input type="text" placeholder="username" id="username" required>
+                    <input type="text" placeholder="firstname" id="firstname" required>
+                    <input type="text" placeholder="lastname" id="lastname" required>
+                    <input type="password" placeholder="password" id="password" required>
+                    <input type="submit" id="submit">
+                </form>
+            </div>
             <header id="secondHeader">
                 <h2>
                     <label for="nav-toggle">
@@ -107,89 +119,27 @@
                     <div class="users">
                         <div class="card">
                             <div class="card-header">
-                                <h3>Recent Users</h3>
-                                <button>See all <span class="las la-arrow-right"></span></button>
+                                <h3>All Users</h3>
+                                <button>Add User <span class="las la-plus-circle"></span></button>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table width="100%">
                                         <thead>
                                             <tr>
+                                                <td>Profile image</td>
                                                 <td>Username</td>
-                                                <td>email</td>
-                                                <td>mobile</td>
+                                                <td>Name</td>
+                                                <td>E-mail</td>
+                                                <td>Password (Hashed)</td>                          
+                                                <td>ID</td>
+                                                <td>Delete</td>
+                                                <td>Edit</td>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>random</td>
-                                                <td>t.1101140@gmail.com</td>
-                                                <td>9717533709</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Anurag</td>
-                                                <td>anurag.1101140@gmail.com</td>
-                                                <td>9717533709</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Anurag</td>
-                                                <td>anurag.1101140@gmail.com</td>
-                                                <td>9717533709</td>
-                                            </tr>
                                         </tbody>
                                     </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="orders">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3>Processing orders</h3>
-                                <button>See all <span class="las la-arrow-right"></span></button>
-                            </div>
-                            <div class="card-body">
-                                <div class="order">
-                                    <div class="info">
-                                        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQSsWyPUJiXmPNL1oqC_tXZP9Cg3C_j5W40w34OroqKzCBi02FyBuFV3cnzYf-bsf9H0DWDwDPdZFM&usqp=CAc" width="40px" height="40px" alt="">
-                                        <div>
-                                            <h4>title</h4>
-                                            <small>#orderid</small>
-                                        </div>
-                                    </div>
-                                    <div class="status">
-                                        <span class="las la-user-circle">cxname</span>
-                                        <span class="las la-shopping-bag">cat</span>
-                                        <span class="las la-rupee-sign">price</span>
-                                    </div>
-                                </div>
-                                <div class="order">
-                                    <div class="info">
-                                        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQSsWyPUJiXmPNL1oqC_tXZP9Cg3C_j5W40w34OroqKzCBi02FyBuFV3cnzYf-bsf9H0DWDwDPdZFM&usqp=CAc" width="40px" height="40px" alt="">
-                                        <div>
-                                            <h4>title</h4>
-                                            <small>#orderid</small>
-                                        </div>
-                                    </div>
-                                    <div class="status">
-                                        <span class="las la-user-circle">Cxname</span>
-                                        <span class="las la-shopping-bag">category</span>
-                                        <span class="las la-rupee-sign">price</span>
-                                    </div>
-                                </div>
-                                <div class="order">
-                                    <div class="info">
-                                        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQSsWyPUJiXmPNL1oqC_tXZP9Cg3C_j5W40w34OroqKzCBi02FyBuFV3cnzYf-bsf9H0DWDwDPdZFM&usqp=CAc" width="40px" height="40px" alt="">
-                                        <div>
-                                            <h4>title</h4>
-                                            <small>#orderid</small>
-                                        </div>
-                                    </div>
-                                    <div class="status">
-                                        <span class="las la-user-circle">Anurag</span>
-                                        <span class="las la-shopping-bag">category</span>
-                                        <span class="las la-rupee-sign">1500</span>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -208,5 +158,5 @@
 
     </footer> -->
 </body>
-<script src="./admin.js"></script>
+<script src="./adminUsers.js"></script>
 </html>
