@@ -3,15 +3,16 @@ let add_products_button = document.querySelector(".card-header > button");
 let cross = document.getElementById("cross");
 let users_form = document.querySelector("#signup-box>form");
 let signupBox = document.getElementById("signup-box");
-window.addEventListener("load",()=>{
+fetchdata();
+function fetchdata(){
     fetch(`https://lensmart-backend3-0.onrender.com/users`)
     .then((res)=>res.json())
     .then((res)=>{
         console.log(res)
         render(res);
     })
-})
-
+}
+let userAuthToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hbWUiLCJwYXNzd29yZCI6IiQyYiQxMCRjZzRXRGppZGY2Z3lmNDllQ296bEFPMHBybmRob0FPRXRxRWdDLjIvRURZQjhHLmR0YmNlYSIsImVtYWlsIjoiYW51cmFnamF0b2ZmaWNpYWxAZ21haWwuY29tIiwiZmlyc3RuYW1lIjoiYWxpIiwibGFzdG5hbWUiOiJiYWJhIiwiYXZhdGFyIjoiaHR0cHM6Ly9jbG91ZGZsYXJlLWlwZnMuY29tL2lwZnMvUW1kM1c1RHVoZ0hpckxIR1ZpeGk2Vjc2TGhDa1pVejZwbkZ0NUFKQml5dkh5ZS9hdmF0YXIvMzA0LmpwZyIsImNyZWF0ZWRBdCI6MTY4MDM3NDA1MjEwNCwiaWQiOjU5LCJpYXQiOjE2ODAzNzQxMDAsImV4cCI6MTY4MDM4NDkwMH0.NDu2FVORWuDEVNqWZpnLpwwSyGeECRYyg2OrdtRIjiI";
 // ------> eventlinstners 
 // for buttons
 add_products_button.addEventListener("click",()=>{
@@ -21,8 +22,25 @@ cross.addEventListener("click",()=>{
     signupBox.style.display = "none";
 })
 
-
-// for form submission for product add 
+// dynamic headers
+let change  = document.getElementsByClassName("card-single");
+let changes = [...change];
+changes.forEach((ele,index)=>{
+    ele.addEventListener("click",()=>{
+        if(index===0){
+            window.location.replace("./adminUsers.html");
+        }
+        else if(index===1){
+            window.location.replace("./adminOrders.html");
+        }
+        else if(index===2){
+            window.location.replace("./adminProducts.html");
+        }else if(index ===3){
+            window.location.replace("./admin.html")
+        }
+    })
+})
+// for form submission for users add 
 users_form.addEventListener("submit",(event)=>{
     event.preventDefault();
     let obj = {
@@ -44,6 +62,8 @@ users_form.addEventListener("submit",(event)=>{
       .then((res)=> res.json())
       .then((r)=> {
         console.log(r);
+        alert("User added succesfully");
+        fetchdata();
       })
 })
 
@@ -55,6 +75,27 @@ function render(data){
         return a;
     })
     userTable.innerHTML = out.join("");
+    let delBTN = document.getElementsByClassName("delete");
+    let deleteBTN = [...delBTN];
+    deleteBTN.forEach((ele,index)=>{
+        ele.addEventListener("click",()=>{
+            fetch(`https://lensmart-backend3-0.onrender.com/users/${data[index].id}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${userAuthToken}`
+                },
+            })
+            .then((res)=>{
+                res.json()
+            })
+            .then((res)=>{
+                console.log(res);
+                alert("deleted succesfully");
+                fetchdata();
+            })
+        });
+    })
 }
 
 // create cards 
@@ -67,8 +108,8 @@ function createtbody(avatar,email,firstname,lastname,id,password,username){
         <td>${email}</td>
         <td>${password}</td>                          
         <td>${id}</td>
-        <td><button id="delete">Delete</button></td>
-        <td><button id="edit">Edit</button></td>
+        <td><button class="delete">Delete</button></td>
+        <td><button class="edit">Edit</button></td>
     </tr>`
     return td;
 }
