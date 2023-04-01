@@ -1,4 +1,13 @@
 ###
-GET  https://lensmart-backend3-0.onrender.com/products/123
+POST https://lensmart-backend3-0.onrender.com/users
 
 Content-Type: application/json
+
+{
+    "username": "alibaba",
+    "password": "Nose",
+    "email": "ali@mail.com",
+    "firstname": "ali",
+    "lastname": "baba",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/304.jpg"
+}

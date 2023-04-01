@@ -246,20 +246,36 @@ tr td:last-child{
 .table-responsive{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 10px;
+    grid-template-columns: repeat(2,1fr);
+    /* height: 230px; */
+    gap: 1rem;
     overflow: auto;
 }
 .small-cards{
-    width: 90%;
+    display: flex;
+    border: 0.5px solid #808080;
+    /* padding: 0.2rem; */
+    height: 25vh;
     border-radius: 10px;
-    background-color: #f5f5f5;
+        
+}
+.small-cards:hover{
     box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 10px;
+
+}
+.small-cards>div:nth-child(2){
+    padding: 1rem;
+    width: 90%;
+    /* justify-content: space-between; */
+    /* align-items: flex-start; */
+    display: flex;
+    flex-direction: column;
 }
 .small-cards img{
-    width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    height: 100%;
+    /* border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; */
+    border-radius: 10px;
 }
 
 /* css for product cards */
@@ -303,6 +319,71 @@ tr td:last-child{
 .la-plus-circle{
     font-size: 20px;
     margin-left: 0.2rem;
+}
+#signup-box{
+    margin: 4% auto;
+    /* background-color: #fff; */
+    padding: 10px;
+    color: var(--color-dark);
+    border-radius: 3px;
+    border: 1px solid var(--color-dark);
+    border-radius: 10px;
+    padding: 1rem;
+    display: none;
+    position: fixed;
+    right: 20vw;
+    /* top: 5vh; */
+    backdrop-filter: blur(20px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    left: 20vw;
+}
+#signup-box h1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+#signup-box form input,#signup-box form select{
+    padding: 8px;
+    border: none;
+    border: 1px solid var(--color-dark);
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 10px;
+    
+}
+#signup-box form input:focus,#signup-box form select:focus{
+    border-color: var(--color-dark);
+    outline: none;
+    box-shadow: 0 0 8px 0 var(--color-dark);
+}
+#submit{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    border: none;
+    background-color: var(--color-dark);
+    color: #ffff;
+    margin: auto;
+    width: 90%;
+}
+.deleteBTN{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: auto;
+    border-radius: 7px;
+    border: none;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: .5rem;
+    
+}
+.deleteBTN:hover{
+    background-color: transparent;
+    color: var(--color-dark);
+    border: 1px solid var(--main-color);
 }
 /* media queries */
 
@@ -393,6 +474,13 @@ tr td:last-child{
 }
 
 @media only screen and (max-width: 560px){
+    .table-responsive{
+        
+        grid-template-columns: repeat(1,1fr);
+    }
+    .small-cards{
+        font-size: 0.7rem;
+    }
     .cards{
         grid-template-columns: 100%;
     }

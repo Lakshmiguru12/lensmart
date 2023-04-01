@@ -80,7 +80,7 @@ window.addEventListener("load",()=>{
 
 // rendering cards
 function renderCards(data){
-    let a = data.map((ele)=> createcards(ele.title,ele.frameImg,ele.frameType,ele.discountedPrice,ele.brandName));
+    let a = data.map((ele)=> createcards(ele.title,ele.frameImg,ele.frameType,ele.discountedPrice,ele.ModelNo,ele.brandName));
     show_products.innerHTML = a.join("");
     let btns = document.querySelectorAll(".deleteBTN");
     let deleteBTNS = [...btns]
@@ -93,14 +93,14 @@ function renderCards(data){
 }
 
 //creating cards 
-function createcards(title,image,frame,price,brandName){
+function createcards(title,image,frame,price,ModelNo,brandName){
     let card = `<div class="small-cards">
     <div> <img src="${image}" alt=""></div>
     <div>
         <h4>${title}</h4>
         <p><span>Brand:</span>${brandName}</p>
         <p><span>size: </span> ${frame}</p>
-        <p>model number</p>
+        <p>Model number: ${ModelNo}</p>
         <h3><h4><i class="las la-rupee-sign"></i>${price}</h3>
         <button class ="deleteBTN">Delete <span class = "las la-trash-alt"></span></button>
     </div>
