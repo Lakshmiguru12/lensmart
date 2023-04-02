@@ -71,8 +71,6 @@ Payment Page:
 
 
 
-
-
 Admin Dashboard Page :
 ![WhatsApp Image 2023-04-02 at 1 55 36 PM](https://user-images.githubusercontent.com/80309747/229348515-b4064f6c-1280-4e42-aafc-700cdc139658.jpeg)
 ![WhatsApp Image 2023-04-02 at 1 55 35 PM (1)](https://user-images.githubusercontent.com/80309747/229348578-70abf26b-15f6-49d6-95f9-59f1d9a062f0.jpeg)
@@ -87,6 +85,11 @@ Admin Add Product Page :
 Admin  Prodcut Page
 
 ![WhatsApp Image 2023-04-02 at 1 55 34 PM (1)](https://user-images.githubusercontent.com/80309747/229348952-cb6c79b2-c08c-4414-971f-e665c4dc28fc.jpeg)
+
+Responsiveness of the page: 
+
+![Screenshot (85)](https://user-images.githubusercontent.com/80309747/229366063-8d43de9b-6f4c-49ad-9434-2ef7cf6652fb.png)
+![Screenshot (86)](https://user-images.githubusercontent.com/80309747/229366065-3c3bbf11-873e-4dff-bc30-ead600eafc56.png)
 
 
 
