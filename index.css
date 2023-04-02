@@ -131,30 +131,22 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-left: 10px;
-    width: 78%;
+    margin-left: 20px;
     /* border: 1px solid red; */
 }
 
-/* .third>.left>h4 {
+.third>.left>h4 {
     color: #000042;
-    font-weight: 900;
-    text-align: left;
-    font-size: 15px;
+    /* font-weight: 900; */
+    text-align: center;
+    font-size: 14px;
     padding: 19px 15px;
     cursor: pointer;
     /* border: 1px solid red; */
+}
 
-
-
-.third>.left>h4 {
-    color: #020243;
-    font-weight: 700;
-    text-align: center;
-    font-size: 12px;
-    /* padding: 19px 15px; */
-    cursor: pointer;
-    /* border: 2px solid rgb(6, 6, 6); */
+.third>.left>h4:hover {
+    border-bottom: 3px solid #000042;
 }
 
 /* ====> here's a (dropdowns) css ----> {starts} ------------------>*/
@@ -395,16 +387,10 @@ img {
 .headline>h1 {
     font-weight: 100;
     font-size: 35px;
-    margin-bottom: 20px;
 }
 
 .headline>p {
     text-align: justify;
-    font-size: 15px;
-    font-family: " lenskartsans-regular";
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-    word-spacing: 2px;
 }
 
 .icons {
@@ -519,145 +505,10 @@ img {
     align-items: center;
 }
 
+/* CSS from Vamshi Krishna */
 
-
-
-.font-head {
-    font-family: "poppins", sans-serif;
-    letter-spacing: 1px;
-    word-spacing: 3px;
-    font-size: 30px;
-    margin-top: 80px;
-    display: flex;
-    flex-direction: row;
-    width: 94%;
-    color: black;
-    justify-content: center;
-    margin-bottom: 40px;
-}
-
-.font-head>h4 {
-    display: flex;
-    flex-direction: row;
-    width: 94%;
-    color: black;
-    justify-content: center;
-    margin-bottom: 40px;
-
-}
-
-#lastLine h3 {
-    /* width: 100%;
-    height: 40%;
-    background: #fff092; */
-    text-align: center;
-}
-
-
-
-#middle1 {
-    display: flex;
-    width: 99%;
-    /* border: 3px solid rgb(14, 13, 13); */
-    margin-top: 40px;
-    margin-bottom: 30px;
-    margin-left: 10px;
-
-
-}
-
-
-.wearTrend {
-    width: 20%;
-    font-family: 'Rajdhani-Medium';
-    font-size: 50px;
-    font-weight: bold;
-    text-align: left;
-    padding-top: 2%;
-    letter-spacing: -1px;
-    /* border: 2px solid rgb(225, 19, 19); */
-}
-
-#middle1 img {
-    /* border: 2px solid rgb(225, 19, 19); */
-    width: 90%;
-
-
-}
-
-.SLIDE1_flex {
-    /* border: 2px solid red; */
-    width: 80%;
-    display: flex;
-}
-
-.SLIDE1_flex div {
-    text-align: center;
-
-
-}
-
-.SLIDE1_flex div .trendcta {
-    margin-left: 50px;
-    /* border: 2px solid red; */
-}
-
-.TrendyTag {
-    font-family: 'Futura-Medium';
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: -5px
-}
-
-.trendtitle {
-    font-family: 'Futura-Medium';
-    font-size: 18px;
-    font-weight: 600;
-    margin: 15px 0;
-}
-
-.trendcta {
-    background: #56b7c3;
-    color: #ffffff;
-    padding: 10px 0;
-    width: 140px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 16px;
-    border-radius: 5px;
-    margin-top: 22px;
-    letter-spacing: 0.5px
-}
-
-a {
-    text-decoration: none !important;
-}
-
-.wear-the-trend-sect img {
-    width: 75%
-}
-
-.trendcta:hover {
-    background: #56c3bf
-}
-
-/* .SLIDE2 {
-    display: none
+/* {
+    color: #000042;
+    color: #6363c4;
 } */
 
-/* .mt45 {
-    margin-top: 45px
-        } */
-
-.w90 {
-    width: 90%
-}
-
-.leftarrow1,
-.leftarrow2,
-.rightarrow1,
-.rightarrow2 {
-    font-size: 40px;
-    padding-top: 6%;
-    cursor: pointer;
-}

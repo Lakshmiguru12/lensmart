@@ -7,15 +7,7 @@ let Signinform = document.querySelector("#sign-in-form")
 let btn = document.getElementById("sign_in_submit")
 let usrData = document.querySelector("#disp-user")
 
-if (userName.value && password.value) {
-    btn.style.backgroundColor = "lightgreen";
-    btn.style.color = 'white';
-    btn.style.border = 'none'
-}
-else {
-    btn.style.backgroundColor = "#c1bebe";
-    btn.style.color = '#000042';
-}
+
 
 
 
@@ -70,7 +62,7 @@ async function fetchrenderdata() {
         localStorage.setItem("username", (data.user.firstname));
         alert("Login Success");
         console.log(usr)
-        //location.reload()
+        location.reload()
     } catch (error) {
 
 
