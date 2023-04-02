@@ -132,7 +132,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 10px;
+    width: 78%;
     /* border: 1px solid red; */
 }
 
@@ -148,13 +149,13 @@
 
 
 .third>.left>h4 {
-    color: #000042;
-    /* font-weight: 900; */
+    color: #020243;
+    font-weight: 700;
     text-align: center;
-    font-size: 14px;
-    padding: 19px 15px;
+    font-size: 12px;
+    /* padding: 19px 15px; */
     cursor: pointer;
-    /* border: 1px solid red; */
+    /* border: 2px solid rgb(6, 6, 6); */
 }
 
 .third>.left>h4:hover {
