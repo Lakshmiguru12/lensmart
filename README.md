@@ -22,7 +22,7 @@ Bhaswati Mandal (https://www.linkedin.com/in/bhaswati-mandal-0a4211257/)
 
 
 
-                                                                      💻 Tech Stack
+💻 Tech Stack
 
 ![image](https://user-images.githubusercontent.com/80309747/229348805-946f60f0-26c4-4069-9fb7-3d450e7abc51.png)
 ![image](https://user-images.githubusercontent.com/80309747/229348825-9ba7f0b5-db77-4025-8d48-d1e38421d0f0.png)
@@ -30,7 +30,8 @@ Bhaswati Mandal (https://www.linkedin.com/in/bhaswati-mandal-0a4211257/)
 
 
 
-                                                                           Tools
+Tools
+
 ![image](https://user-images.githubusercontent.com/80309747/229348866-a41c6e5d-458a-4396-a0f6-ce974e5cfae0.png)
 ![image](https://user-images.githubusercontent.com/80309747/229348874-6e5a14c8-46e7-457c-b14c-c2491866064f.png)
 ![image](https://user-images.githubusercontent.com/80309747/229348882-7a0c4058-7f44-48be-88a0-d37da699bbfc.png)
@@ -46,8 +47,11 @@ Home Page :
 
 
 Product Page :
+![WhatsApp Image 2023-04-02 at 8 38 53 PM](https://user-images.githubusercontent.com/80309747/229361795-e7000569-faa7-48b5-8052-8252a878f4bd.jpeg)
 
-Product Page
+
+
+
 
 Single Product Page :
 Single Product Page
