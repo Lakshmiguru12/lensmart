@@ -4,7 +4,7 @@ website for eyesware
 
 Welcome to Lensmart
 Lensmart is a leading e-commerce company that maintains an online optical store packed with both classic and trendy eyeglasses, lenses and more at affordable prices. These glasses can be easily ordered online by the customers, who will get them delivered with many discounts that come and go.This is a collaborative Project from Masai School in the Construct Week With the 5 team members within 5 Days.
-Deployed URL 👉 Click here
+Deployed URL 👉 
 
 Our Team Members
 
@@ -15,6 +15,8 @@ Anurag Choudhary (My Linkedin Profile:-https://www.linkedin.com/in/anurag-choudh
 Vamshi Krishna Bejjarapu (My Linkedin Profile:- https://www.linkedin.com/in/vamshi-krishna-bejjarapu-559388257/)
 
 Pramod Kumar Jangid (My Linkedin Profile:- https://www.linkedin.com/in/pramodjangid)
+
+Bhaswati Mandal (https://www.linkedin.com/in/bhaswati-mandal-0a4211257/)
 
 
 
@@ -44,6 +46,7 @@ Home Page :
 
 
 Product Page :
+
 Product Page
 
 Single Product Page :
