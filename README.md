@@ -16,7 +16,7 @@ Vamshi Krishna Bejjarapu (My Linkedin Profile:- https://www.linkedin.com/in/vams
 
 Pramod Kumar Jangid (My Linkedin Profile:- https://www.linkedin.com/in/pramodjangid)
 
-Bhaswati Mandal (https://www.linkedin.com/in/bhaswati-mandal-0a4211257/)
+Bhaswati Mandal (My Linkedin profile :-https://www.linkedin.com/in/bhaswati-mandal-0a4211257/)
 
 
 
