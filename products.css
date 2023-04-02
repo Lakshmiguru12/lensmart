@@ -1,10 +1,51 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap'); */
 
-* {
-    box-sizing: border-box;
-    /* margin: 0%;
-    padding: 0%; */
+
+
+#main_container{
+    margin-top: 20px;
 }
+/* products page bogy css start  */
+
+
+#products_page_container{
+    width: 95%;
+    /* height:800px; */
+    margin: auto;
+    margin-bottom: 10px;
+margin-top: 20px;
+    display: grid;
+    grid-template-columns: 22% auto;
+}
+
+
+#product_page_filters{
+
+    border: 1px solid red ;
+}
+#product_page_body{
+border: 1px solid blue;
+}
+div>img{
+  
+    width: 95%;
+    display: block;
+   margin:auto ;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .nav {
     width: 100%;
@@ -366,9 +407,8 @@ img {
     width: 100%;
 }
 
-/* ===>--------------------------> this is end of homepage => (header)  */
 
-/* there is another css file for middle section for the website's home page ===> */
+
 /* --------------------------> this is start of homepage => (footer)  */
 
 .footer {
@@ -505,10 +545,67 @@ img {
     align-items: center;
 }
 
-/* CSS from Vamshi Krishna */
 
-/* {
-    color: #000042;
-    color: #6363c4;
-} */
 
+
+/* here a (dropdowns) css ----> {ends} --------------------> */
+
+/* right */
+.third>.right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    align-items: center;
+    margin-right: 27px;
+}
+
+.third>.right>a>img {
+    width: 60px;
+    border-radius: 4px;
+}
+
+/* -------------------------->this is a (nav)- dropdown cards */
+
+.extra1 {
+    height: 130px;
+    width: 100vh;
+}
+
+.extra2 {
+    height: 170px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: #f5f5f5;
+}
+
+#card1 {
+    cursor: pointer;
+    margin: auto;
+    width: 190px;
+    height: 130px;
+    border-radius: 7px;
+    background-color: white;
+}
+
+#card1>img {
+    width: 180px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#card1>.heading {
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+}
+
+#card1>.heading>h4 {
+    font-weight: 500;
+    font-family: futurastd-book, helvetica neue, Helvetica, Arial, sans-serif;
+    color: #8a8888;
+}
+
+img {
+    width: 100%;
+}

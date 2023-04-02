@@ -9,9 +9,55 @@
     <link rel="stylesheet" href="./middle.css">
     <title>Lensmart.com® - Sunglasses, Contact Lens, Eyeglasses, Frames, Buy 1 Get 1 Offer for Gold Members</title>
     <link rel="websit icon" type="png" href="./index_logo/WS_logo.png">
+    <link rel="stylesheet" href="/css/signin.css">
+    <link rel="stylesheet" href="/css/signup.css">
+
+
 </head>
 
 <body>
+    <!-- Login Page  -->
+
+    <div class="overlay" onclick="closePopup()"></div>
+
+    <div class="signin-box">
+        <span >&times;</span>
+        <div id="image-box"> <img
+                src="https://static1.lenskart.com/media/desktop/img/DesignStudioIcons/DesktopLoginImage.svg" alt="">
+        </div>
+        <div id="form-box">
+            <h1>Sign In
+            </h1>
+            <form id="sign-in-form">
+                <input type="text" placeholder="User Name*" id="sign_in_userName" required>
+
+                <input type="password" placeholder="Password*" id="sign_in_password"  required>
+                <input type="submit" id="sign_in_submit" value="Sign In">
+                <p style="text-align: center;">New member?
+                    <a onclick="showsignup()">
+                        Create an Account</a>
+                </p>
+            </form>
+        </div>
+    </div>
+<!-- Signup Page -->
+<div class="signup-box">
+    <span>&times;</span>
+    <h1>Create an Account</h1>
+    <form id="sign-up-form">
+        <input type="text" placeholder="User Name*" id="userName" name="userName" required>
+        <input type="text" placeholder="First Name*" id="firstName" name="firstName" required>
+        <input type="text" placeholder="Last Name*" id="lastName" name="lastName" required>
+        <input type="number" placeholder="Mobile*" id="mobile" name="mobile" required>
+        <input type="email" placeholder="Email*" id="email" name="email" required>
+        <input type="password" placeholder="Password*" id="password" name="password" required>
+        <input type="submit" id="submit" value="Create an Account">
+        <p style="text-align: center;">Have an account ?
+            <a onclick="showLogin()" style=" color: #6666b9;">Sign In</a>
+        </p>
+    </form>
+</div>
+
     <!-- ===> here is a navbar (3 types of navbar) -->
     <div class="nav">
         <!-- this is first nav -->
@@ -60,7 +106,7 @@
             </div>
             <div class="others">
                 <a href="#">Track Order</a>
-                <span id="user1"><a>Sign In & Sign Up</a></span>
+                <span id="user1" onclick="showsignup()"><a id="disp-user">Sign In & Sign Up</a></span>
                 <a href="#"> <img src="https://cdn-icons-png.flaticon.com/128/35/35538.png" alt=""> Wishlist</a>
                 <a href="/rotten-snakes-6255/CartPage/html/cart.Html"> <img
                         src="https://cdn-icons-png.flaticon.com/128/2211/2211008.png" alt="" sizes="" srcset="">
@@ -488,125 +534,15 @@
     <div class="wallpaper3">
         <img src="https://static1.lenskart.com/media/desktop/img/Apr22/Bannerforexport.jpg" alt="">
     </div>
-    <!-- <div class="slider1">
+    <div class="slider1">
         <div class="text">
             <p>WEAR</p>
             <P>THE</P>
             <P>TREND</P>
             <p>Our hottest collections</p>
         </div>
-        <div class="SpecsSlider" id="SpecsSlider"> -->
-    <!-- append here -->
-    <!-- </div>
-    </div> -->
-    <!-- -------------------------- -->
-    <div id="middle1">
-
-        <!-- <div class="wear-the-trend-sect justcenter flex w90 mt45"> -->
-        <div class="wearTrend">WEAR THE <div style="margin-top:-19px">TREND</div>
-            <div class="TrendyTag">Our hottest collections</div>
-        </div>
-        <div class="SLIDE1_flex">
-            <div class="leftarrow1">❮</div>
-            <div><img src="https://static1.lenskart.com/media/desktop/img/Sep21/image179.png">
-                <div class="trendtitle">Round</div><a class="getGaData" data-event="Banner Clicks"
-                    data-category="Banner Clicks" data-action="WEAR_THE_TREND" data-label="1_round"
-                    href="/eyeglasses/frame-shape/round.html">
-                    <div class="trendcta">Explore</div>
-                </a>
-            </div>
-            <div><img src="https://static1.lenskart.com/media/desktop/img/Sep21/cateeye.jpg">
-                <div class="trendtitle">Cat-Eye</div><a class="getGaData" data-event="Banner Clicks"
-                    data-category="Banner Clicks" data-action="WEAR_THE_TREND" data-label="2_cat_eye"
-                    href="/eyeglasses/brands/vincent-chase-eyeglasses/cat-eye.html">
-                    <div class="trendcta">Explore</div>
-                </a>
-            </div>
-            <div><img src="https://static1.lenskart.com/media/desktop/img/Sep21/clubmaster.jpg">
-                <div class="trendtitle">Clubmaster</div><a class="getGaData" data-event="Banner Clicks"
-                    data-category="Banner Clicks" data-action="WEAR_THE_TREND" data-label="3_club_master"
-                    href="/eyewear/promotion/frame-shape/clubmasters.html">
-                    <div class="trendcta">Explore</div>
-                </a>
-            </div>
-            <div><img src="https://static1.lenskart.com/media/desktop/img/Sep21/trans.jpg">
-                <div class="trendtitle">Transparent</div><a class="getGaData" data-event="Banner Clicks"
-                    data-category="Banner Clicks" data-action="WEAR_THE_TREND" data-label="4_transparent"
-                    href="/eyeglasses/promotions/vc-transparent.html">
-                    <div class="trendcta">Explore</div>
-                </a>
-            </div>
-            <div class="rightarrow1">❯</div>
-        </div>
-        <!-- <div class="SLIDE2 flex" style="display:none">
-            <div class="leftarrow2">❮</div>
-            <div><img src="https://static1.lenskart.com/media/desktop/img/Sep21/blend.jpg">
-                <div class="trendtitle">Blend Edit</div><a class="getGaData" data-event="Banner Clicks"
-                    data-category="Banner Clicks" data-action="WEAR_THE_TREND" data-label="5_blend_edit"
-                    href="/eyeglasses/brands/vincent-chase-eyeglasses/blend-edit.html">
-                    <div class="trendcta">Explore</div>
-                </a>
-            </div>
-            <div><img src="https://static1.lenskart.com/media/desktop/img/Sep21/clipon.jpg">
-                <div class="trendtitle">Air Clip On</div><a class="getGaData" data-event="Banner Clicks"
-                    data-category="Banner Clicks" data-action="WEAR_THE_TREND" data-label="6_air_clip_on"
-                    href="/eyeglasses/brands/vincent-chase-eyeglasses/air-clip-on.html">
-                    <div class="trendcta">Explore</div>
-                </a>
-            </div>
-            <div><img src="https://static1.lenskart.com/media/desktop/img/Sep21/airflex.jpg">
-                <div class="trendtitle">Air Flex</div><a class="getGaData" data-event="Banner Clicks"
-                    data-category="Banner Clicks" data-action="WEAR_THE_TREND" data-label="7_air_flex"
-                    href="/eyeglasses/brands/vincent-chase-eyeglasses/air-flex.html">
-                    <div class="trendcta">Explore</div>
-                </a>
-            </div>
-            <div><img src="https://static1.lenskart.com/media/desktop/img/Sep21/aviator.jpg">
-                <div class="trendtitle">Retro Aviator</div><a class="getGaData" data-event="Banner Clicks"
-                    data-category="Banner Clicks" data-action="WEAR_THE_TREND" data-label="8_retro_aviator"
-                    href="/eyeglasses/brands/vincent-chase-eyeglasses/aviator.html">
-                    <div class="trendcta">Explore</div>
-                </a>
-            </div>
-            <div class="rightarrow2">❯</div>
-        </div> -->
-        <!-- </div> -->
-
-
-    </div>
-
-    <!-- ---------------------------------- -->
-
-    <div>
-        <h4 class="font-head">
-            As Seen on Shark Tank
-        </h4>
-        <div id="wallpaper4">
-            <img src="https://static1.lenskart.com/media/desktop/img/Dec22/1-Dec/Homepage-Banner-web.gif"
-                alt="wallpaper4">
-        </div>
-
-    </div>
-    <div>
-        <h4 class="font-head">
-            As Seen On Karan Johar
-        </h4>
-        <div id="wallpaper5">
-            <img src="https://static1.lenskart.com/media/desktop/img/Dec22/Web_banner.gif" alt="wallpaper5">
-        </div>
-
-    </div>
-    <div id="lastLine">
-        <div class="w100 justcenter" style="background:#fff092">
-            <h3 style="font-size:30px;padding:50px 0 10px 0">MEET OUR HAPPY CUSTOMERS</h3>
-            <div style="width:100%;max-width:1350px;display:flex;padding:20px 0 50px 0">
-                <div style="width:31%"><iframe src="https://www.youtube.com/embed/HYPqf_eVvvM?autoplay=1" width="100%"
-                        height="280"></iframe></div>
-                <div style="padding:0 2%;width:38%"><iframe src="https://www.youtube.com/embed/SQm3RxXRunw?autoplay=1"
-                        width="100%" height="280"></iframe></div>
-                <div style="width:31%"><iframe src="https://www.youtube.com/embed/IZpUQ-S_LcM?autoplay=1" width="100%"
-                        height="280"></iframe></div>
-            </div>
+        <div class="SpecsSlider" id="SpecsSlider">
+            <!-- append here -->
         </div>
     </div>
     <!-- this is middle sections ends -->
@@ -618,31 +554,30 @@
                 <h1>Buy The Best Eyewear From Lensmart</h1>
                 <p>Lensmart Is The Leading E-Commerce Portal For Eyewear In India. It Has Revolutionised The Eyewear
                     Industry In The Country With Its Omni-Channel Approach. From An Ever-Growing Number Of Offline
-                    Stores Across Major Cities In The Country To Innovative Integration Of Technology While
-                    Purchasing
+                    Stores Across Major Cities In The Country To Innovative Integration Of Technology While Purchasing
                     Online, Lensmart Caters To Every Customer With Several Deals And Offers.</p>
-                <p>A One-Stop Online Solution For Purchasing Eyewear And Its Accessories, Lensmart Delivers Them
-                    Right
+                <p>A One-Stop Online Solution For Purchasing Eyewear And Its Accessories, Lensmart Delivers Them Right
                     At
-                    Your Doorstep With Convenient Methods Of Payment. Sunglasses As Well As Eyeglasses Are Available
-                    For
+                    Your Doorstep With Convenient Methods Of Payment. Sunglasses As Well As Eyeglasses Are Available For
                     Men And Women In A Diverse Array Of Styles And Trendy Colours. If You Want To Try Out Contact
-                    Lenses, Pick The Ones Of Your Choice From The Extensive Variety Of Coloured Contact Lenses From
-                    Our
+                    Lenses, Pick The Ones Of Your Choice From The Extensive Variety Of Coloured Contact Lenses From Our
                     Online Store.</p>
             </div>
             <div class="icons">
                 <div class="plus">
                     <h3>SUNGLASSES</h3>
-                    <img src="./index_logo/plus-5-24.png" alt="">
+                    <img src="https://img.icons8.com/external-others-inmotus-design/2x/external-Plus-geo-others-inmotus-design-2.png"
+                        alt="">
                 </div>
                 <div class="plus">
                     <h3>EYEGLASSES</h3>
-                    <img src="./index_logo/plus-5-24.png" alt="">
+                    <img src="https://img.icons8.com/external-others-inmotus-design/2x/external-Plus-geo-others-inmotus-design-2.png"
+                        alt="">
                 </div>
                 <div class="plus">
                     <h3>CONTACT LENSES</h3>
-                    <img src="./index_logo/plus-5-24.png" alt="">
+                    <img src="https://img.icons8.com/external-others-inmotus-design/2x/external-Plus-geo-others-inmotus-design-2.png"
+                        alt="">
                 </div>
             </div>
             <div class="link">
@@ -686,18 +621,20 @@
             <div class="socials">
                 <p>FOLLOW US AT</p>
                 <a href="#">
-                    <img src="./index_logo/facebook-4-24.png" alt="f">
+                    <img src="https://www.iconsdb.com/icons/preview/white/facebook-xxl.png" alt="f">
                 </a>
                 <a href="#">
-                    <img src="./index_logo/instagram-24.png" alt="i">
+                    <img src="https://www.iconsdb.com/icons/preview/white/facebook-xxl.png" alt="i">
                 </a>
                 <a href="#">
-                    <img src="./index_logo/twitter-24.png" alt="t">
+                    <img src="https://www.iconsdb.com/icons/preview/white/facebook-xxl.png" alt="t">
                 </a>
             </div>
         </div>
     </div> <!--this is (footer) close tag-->
 </body>
 <script src="index.js"></script>
+<script src="/script/signin.js"></script>
+<script src="/script/signup.js"></script>
 
 </html>
