@@ -1,3 +1,54 @@
+// Displaying Login Card @Vamshi Krishna
+
+let user1 = document.getElementById("user1");
+let loginCard = document.querySelector('.signin-box');
+let signupCard = document.querySelector('.signup-box');
+let overlay = document.getElementsByClassName('overlay')[0];
+let closesignin = document.querySelector('.signin-box span');
+let closeSignup = document.querySelector('.signup-box span');
+
+function showLogin(){
+    loginCard.classList.add('show-sign-in')
+    overlay.classList.add('show-overlay');
+    signupCard.classList.remove('show-sign-up');
+};
+
+function showsignup(){
+    loginCard.classList.remove('show-sign-in');
+    signupCard.classList.add('show-sign-up');
+    overlay.classList.add('show-overlay');
+};
+
+function closePopup(){
+    loginCard.classList.remove('show-sign-in');
+    signupCard.classList.remove('show-sign-up');
+    overlay.classList.remove('show-overlay');
+};
+
+closeSignup.addEventListener('click',()=>{
+    closePopup()
+});
+
+closesignin.addEventListener('click',()=>{
+    closePopup()
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // making dropdowns of the headers
 //---------------> this is second third nav div h4 tags---->
 // this is drop1
@@ -113,14 +164,14 @@ dropdown7.addEventListener("mouseout", () => {
 let head8 = document.getElementById("headeight");
 
 
-let user2 = sessionStorage.getItem("user2") || "Sign In & Sign Up";
-let user1 = document.getElementById("user1");
-//let username=localStorage.getItem("user");
-console.log(user2)
-user1.addEventListener("click", () => {
-    window.location.href = "../loginpage/login.html";
-})
-user1.textContent = user2;
+// let user2 = sessionStorage.getItem("user2") || "Sign In & Sign Up";
+// let user1 = document.getElementById("user1");
+// //let username=localStorage.getItem("user");
+// console.log(user2)
+// user1.addEventListener("click", () => {
+//     window.location.href = "/signup.html";
+// })
+// user1.textContent = user2;
 
 //--------------> making an middle part of website
 

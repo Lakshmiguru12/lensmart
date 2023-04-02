@@ -9,9 +9,55 @@
     <link rel="stylesheet" href="./middle.css">
     <title>Lensmart.com® - Sunglasses, Contact Lens, Eyeglasses, Frames, Buy 1 Get 1 Offer for Gold Members</title>
     <link rel="websit icon" type="png" href="./index_logo/WS_logo.png">
+    <link rel="stylesheet" href="/css/signin.css">
+    <link rel="stylesheet" href="/css/signup.css">
+
+
 </head>
 
 <body>
+    <!-- Login Page  -->
+
+    <div class="overlay" onclick="closePopup()"></div>
+
+    <div class="signin-box">
+        <span >&times;</span>
+        <div id="image-box"> <img
+                src="https://static1.lenskart.com/media/desktop/img/DesignStudioIcons/DesktopLoginImage.svg" alt="">
+        </div>
+        <div id="form-box">
+            <h1>Sign In
+            </h1>
+            <form id="sign-in-form">
+                <input type="text" placeholder="User Name*" id="sign_in_userName" required>
+
+                <input type="password" placeholder="Password*" id="sign_in_password"  required>
+                <input type="submit" id="sign_in_submit" value="Sign In">
+                <p style="text-align: center;">New member?
+                    <a onclick="showsignup()">
+                        Create an Account</a>
+                </p>
+            </form>
+        </div>
+    </div>
+<!-- Signup Page -->
+<div class="signup-box">
+    <span>&times;</span>
+    <h1>Create an Account</h1>
+    <form id="sign-up-form">
+        <input type="text" placeholder="User Name*" id="userName" name="userName" required>
+        <input type="text" placeholder="First Name*" id="firstName" name="firstName" required>
+        <input type="text" placeholder="Last Name*" id="lastName" name="lastName" required>
+        <input type="number" placeholder="Mobile*" id="mobile" name="mobile" required>
+        <input type="email" placeholder="Email*" id="email" name="email" required>
+        <input type="password" placeholder="Password*" id="password" name="password" required>
+        <input type="submit" id="submit" value="Create an Account">
+        <p style="text-align: center;">Have an account ?
+            <a onclick="showLogin()" style=" color: #6666b9;">Sign In</a>
+        </p>
+    </form>
+</div>
+
     <!-- ===> here is a navbar (3 types of navbar) -->
     <div class="nav">
         <!-- this is first nav -->
@@ -60,7 +106,7 @@
             </div>
             <div class="others">
                 <a href="#">Track Order</a>
-                <span id="user1"><a>Sign In & Sign Up</a></span>
+                <span id="user1" onclick="showsignup()"><a id="disp-user">Sign In & Sign Up</a></span>
                 <a href="#"> <img src="https://cdn-icons-png.flaticon.com/128/35/35538.png" alt=""> Wishlist</a>
                 <a href="/rotten-snakes-6255/CartPage/html/cart.Html"> <img
                         src="https://cdn-icons-png.flaticon.com/128/2211/2211008.png" alt="" sizes="" srcset="">
@@ -588,5 +634,7 @@
     </div> <!--this is (footer) close tag-->
 </body>
 <script src="index.js"></script>
+<script src="/script/signin.js"></script>
+<script src="/script/signup.js"></script>
 
 </html>
