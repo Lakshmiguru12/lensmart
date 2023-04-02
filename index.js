@@ -261,3 +261,5 @@ function showSlider(data1, data2) {
         showTrends.append(divEl);
     });
 }
+
+
