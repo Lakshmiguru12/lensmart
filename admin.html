@@ -10,10 +10,10 @@
     <link rel="websit icon" type="png" href="./index_logo/WS_logo.png">
 </head>
 <body>
-    <!-- <header>
-
-    </header> -->
-    <!-- <main> -->
+    <header>
+        
+    </header>
+    <main>
         <input type="checkbox"  id="nav-toggle">
         <div class="sidebar">
             <div class="sidebar-brand">
@@ -61,14 +61,14 @@
                     <div>
                         <h4>Admin</h4>
                         <div class="main-content">
-                            <div class="dropdown">
+                            <!-- <div class="dropdown">
                                 <button class="dropbtn">Dropdown</button>
                                 <div class="dropdown-content">
                                   <a href="#">Link 1</a>
                                   <a href="#">Link 2</a>
                                   <a href="#">Link 3</a>
                                 </div>
-                            </div>
+                            </div> -->
                     </div>
                 </div>
             </header>
@@ -117,7 +117,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3>Recent Users</h3>
-                                <button>See all <span class="las la-arrow-right"></span></button>
+                                <button id="seeall">See all <span class="las la-arrow-right"></span></button>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -125,26 +125,12 @@
                                         <thead>
                                             <tr>
                                                 <td>Username</td>
-                                                <td>email</td>
-                                                <td>mobile</td>
+                                                <td>E-mail</td>
+                                                <td>Fullname</td>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>random</td>
-                                                <td>t.1101140@gmail.com</td>
-                                                <td>9717533709</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Anurag</td>
-                                                <td>anurag.1101140@gmail.com</td>
-                                                <td>9717533709</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Anurag</td>
-                                                <td>anurag.1101140@gmail.com</td>
-                                                <td>9717533709</td>
-                                            </tr>
+                                            <!-- tbody will be appended here  -->
                                         </tbody>
                                     </table>
                                 </div>
@@ -155,10 +141,10 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3>Processing orders</h3>
-                                <button>See all <span class="las la-arrow-right"></span></button>
+                                <button id="seeorders">See all <span class="las la-arrow-right"></span></button>
                             </div>
-                            <div class="card-body">
-                                <div class="order">
+                            <div class="card-body" id="orderbody">
+                                <!-- <div class="order">
                                     <div class="info">
                                         <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQSsWyPUJiXmPNL1oqC_tXZP9Cg3C_j5W40w34OroqKzCBi02FyBuFV3cnzYf-bsf9H0DWDwDPdZFM&usqp=CAc" width="40px" height="40px" alt="">
                                         <div>
@@ -167,39 +153,11 @@
                                         </div>
                                     </div>
                                     <div class="status">
-                                        <span class="las la-user-circle">cxname</span>
-                                        <span class="las la-shopping-bag">cat</span>
-                                        <span class="las la-rupee-sign">price</span>
+                                        <span class="las la-user-circle"></span>
+                                        <span class="las la-shopping-bag"></span>
+                                        <span class="las la-rupee-sign"></span>
                                     </div>
-                                </div>
-                                <div class="order">
-                                    <div class="info">
-                                        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQSsWyPUJiXmPNL1oqC_tXZP9Cg3C_j5W40w34OroqKzCBi02FyBuFV3cnzYf-bsf9H0DWDwDPdZFM&usqp=CAc" width="40px" height="40px" alt="">
-                                        <div>
-                                            <h4>title</h4>
-                                            <small>#orderid</small>
-                                        </div>
-                                    </div>
-                                    <div class="status">
-                                        <span class="las la-user-circle">Cxname</span>
-                                        <span class="las la-shopping-bag">category</span>
-                                        <span class="las la-rupee-sign">price</span>
-                                    </div>
-                                </div>
-                                <div class="order">
-                                    <div class="info">
-                                        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQSsWyPUJiXmPNL1oqC_tXZP9Cg3C_j5W40w34OroqKzCBi02FyBuFV3cnzYf-bsf9H0DWDwDPdZFM&usqp=CAc" width="40px" height="40px" alt="">
-                                        <div>
-                                            <h4>title</h4>
-                                            <small>#orderid</small>
-                                        </div>
-                                    </div>
-                                    <div class="status">
-                                        <span class="las la-user-circle">Anurag</span>
-                                        <span class="las la-shopping-bag">category</span>
-                                        <span class="las la-rupee-sign">1500</span>
-                                    </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -212,10 +170,10 @@
                 </div>
             </main>
         </div>
-    <!-- </main> -->
-    <!-- <footer>
-
-    </footer> -->
+    </main>
+    <footer>
+        
+    </footer>
 </body>
 <script src="./admin.js"></script>
 </html>

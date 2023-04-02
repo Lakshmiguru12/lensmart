@@ -17,6 +17,9 @@
     background-color: var(--main-color) !important;
     color: var(--color-dark) !important;
 }
+button{
+    cursor: pointer;
+}
 .sidebar{
     width: 345px;
     position: fixed;
@@ -105,11 +108,12 @@
     padding: 1rem;
     display: none;
     position: fixed;
-    right: 20vw;
+    right: 30vw;
     /* top: 5vh; */
+    top: 20vh;
     backdrop-filter: blur(20px);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    left: 20vw;
+    left: 30vw;
 }
 #signup-box h1{
     display: flex;
@@ -386,6 +390,13 @@ td{
         align-items: center;
         justify-content: center !important;
         align-items: center;
+    }
+    #signup-box h1{
+        font-size: 1.5rem;
+    }
+    #signup-box{
+        left: 20vw;
+        width: 250px;
     }
     #secondHeader h2  span{
         text-align: center;

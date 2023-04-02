@@ -13,6 +13,10 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+::selection {
+    background-color: var(--main-color) !important;
+    color: var(--color-dark) !important;
+}
 .sidebar{
     width: 345px;
     position: fixed;
@@ -335,7 +339,10 @@ tr td:last-child{
     /* top: 5vh; */
     backdrop-filter: blur(20px);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    left: 20vw;
+    left: 30vw;
+}
+#cross{
+    cursor: pointer;
 }
 #signup-box h1{
     display: flex;
@@ -358,6 +365,7 @@ tr td:last-child{
 }
 #submit{
     display: flex;
+    cursor: pointer;
     margin: auto;
     justify-content: center;
     border: none;

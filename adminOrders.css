@@ -4,7 +4,10 @@
 --color-dark: #010045;
 --text-grey: #8390A2;
 }
-
+::selection {
+    background-color: var(--main-color) !important;
+    color: var(--color-dark) !important;
+}
 *{
     padding: 0px;
     margin: 0px;
@@ -157,9 +160,16 @@
 
 .table-responsive>table>tbody>tr img{
     border-radius: 5px;
+    width: 100%;
 }
 .table-responsive>table{
     text-align: center;
+}
+.table-responsive>table>tbody>tr>td{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* margin: auto; */
+    width: 20px;
 }
 .table-responsive>table>tbody>tr>td>button{
     background-color: red;

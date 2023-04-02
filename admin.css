@@ -13,6 +13,10 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+::selection {
+    background-color: var(--main-color) !important;
+    color: var(--color-dark) !important;
+}
 .sidebar{
     width: 345px;
     position: fixed;
@@ -195,6 +199,7 @@
 .card{
     background: #fff;
     border-radius: 5px;
+    cursor: pointer;
     /* padding: 2rem; */
 }
 .card-header,.card-body{

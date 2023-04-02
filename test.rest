@@ -1,8 +1,8 @@
 ###
-POST https://lensmart-backend3-0.onrender.com/login
+DELETE https://lensmart-backend3-0.onrender.com/products/UtKBZCipbE
 Content-Type: application/json
 
-{
-    "username": "Name",
-    "password": "nabba"
-}
+# {
+#     "username": "Name",
+#     "password": "nabba"
+# }
