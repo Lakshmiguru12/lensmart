@@ -1,25 +1,30 @@
 let url = "https://lensmart-backend3-0.onrender.com"
 
+let dispLog = document.querySelector('.signin-box');
+let dispup = document.querySelector('.signup-box');
+let backgrounddisp = document.getElementsByClassName('overlay')[0];
+let a = document.querySelector('.signin-box span');
+let b = document.querySelector('.signup-box span');
 
-let form = document.querySelector("form")
+let signupform= document.querySelector("#sign-up-form")
 let firstName = document.getElementById("firstName")
 let lastName = document.getElementById("lastName")
 let mobile = document.getElementById("mobile")
 let email = document.getElementById("email")
 let password = document.getElementById("password")
+let userName = document.getElementById("userName")
 
 
-
-form.addEventListener("submit", (e) => {
+signupform.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    fetchrenderdata()
+    fetchdata()
 
 })
 
-async function fetchrenderdata() {
+async function fetchdata() {
     let obj = {
-        username: firstName.value + "" + lastName.value,
+        username:userName.value,
         firstname: firstName.value,
         lastname: lastName.value,
         mobile: mobile.value,
@@ -27,7 +32,7 @@ async function fetchrenderdata() {
         password: password.value
 
     }
-
+    try{
     let fetchedata = await fetch(`${url}/users`);
     let resData = await fetchedata.json();
 
@@ -62,8 +67,22 @@ async function fetchrenderdata() {
     })
     let data = await res.json();
     console.log(data)
+    showLogin()
+    alert("Account Created successfull");
+}
+catch(err)
+{
+    console.log(err);
 }
 
+    // window.location.assign("/signin.html")
+}
+
+function showLogin(){
+    dispLog.classList.add('show-sign-in')
+    backgrounddisp.classList.add('show-overlay');
+    dispup.classList.remove('show-sign-up');
+};
 
 
 

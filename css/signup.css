@@ -1,41 +1,77 @@
-* {
+/*  {
     margin: 0px;
     padding: 0px;
-}
+} */
 
-body {
+/* body {
     width: 100%;
-    height: 100%;
-    /* background-image: url(./backgroundimags/3386851.jpg); */
-    /* background-position: center; */
-    font-family: 'Roboto', sans-serif;
-    /* position: absolute; */
-}
-#signup-box{
+    height: 100%; */
+/* background-image: url(/index.html);
+    background-position: center; */
+/* font-family: 'Roboto', sans-serif; */
+/* position: absolute; */
+/* } */
+.signup-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
     width: 380px;
-    height: 400px;
-    position: relative;
+    height: auto;
     margin: 4% auto;
     background-color: #fff;
     padding: 10px;
     border-radius: 3px;
-   /* border: 2px solid red; */
-   border-radius: 10px;
-   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.show-sign-up {
+    opacity: 1;
+    z-index: 10;
+}
 
-form {
+.overlay {
+    background-color: #8080809c;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    opacity: 0;
+    z-index: -2;
+}
+
+.show-overlay {
+    opacity: 1;
+    z-index: 9;
+}
+
+.signup-box>span {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 25px;
+    /* border: 1px solid red; */
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+#sign-up-form {
     margin-top: 15px;
     width: 300px;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 
 
 
 
-#submit{
+#submit {
     width: 320px;
     height: 35px;
     border: none;
@@ -46,15 +82,8 @@ form {
     border-radius: 15px;
 }
 
-p {
-    text-align: center;
-    color: rgb(0, 0, 0);
-    margin-top: 20px;
-    font-size: 15px;
 
-}
-
-form input {
+#sign-up-form>input {
     width: 100%;
     padding: 8px;
     border: none;
@@ -64,19 +93,15 @@ form input {
     margin-bottom: 10px;
 
 }
-p{
-    color: #6666b9;
-}
-p a {
-    color: #000042;
-}
-h1 {
+
+
+.signup-box>h1 {
     text-align: center;
     padding-top: 15px;
     font-family: lenskartserif-normal;
-    font-style: normal; 
-     font-weight: 400;
- 
-  
+    font-style: normal;
+    font-weight: 400;
+
+
     color: #1b1b77;
 }
