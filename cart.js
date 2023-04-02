@@ -1,3 +1,43 @@
+
+
+let cartdata=document.querySelector(".cart-itmes")
+
+  
+fetchingdata()
+function fetchingdata(){
+    fetch("https://lensmart-backend3-0.onrender.com/product_status")
+    .then((res)=>{
+        return res.json()
+    })
+    .then((data)=>{
+        randarcards(data)
+   console.log(data)
+    })
+    
+
+}
+function randarcards(data){
+    let sampl=data.map((ele)=>{
+        let create=addItemToCart(ele.frameImg,ele.discountedPrice,ele.title)
+        return create
+        // cartdata.append()
+    })
+    cartdata.innerHTML=sampl.join("")
+console.log(sampl)
+}
+function createcarts(image,price,title){
+    let card=`<div class="shop-item">
+    <span class="shop-item-title">${title}</span>
+    <img class="shop-item-image" src="${image}" width=700px>
+    <div class="shop-item-details">
+        <span class="shop-item-price">${price}</span>
+        
+        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+    </div>
+</div> `
+    return card;
+}
+
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
@@ -20,7 +60,7 @@ function ready() {
     var addToCartButtons = document.getElementsByClassName('shop-item-button')
     for (var i = 0; i < addToCartButtons.length; i++) {
         var button = addToCartButtons[i]
-        button.addEventListener('click', addToCartClicked)
+        // button.addEventListener('click', addToCartClicked)
     }
 
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
@@ -39,6 +79,7 @@ function removeCartItem(event) {
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
     updateCartTotal()
+
 }
 
 function quantityChanged(event) {
@@ -59,7 +100,7 @@ function addToCartClicked(event) {
     updateCartTotal()
 }
 
-function addItemToCart(title, price, imageSrc) {
+function addItemToCart(imageSrc,price,title  ) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
@@ -100,4 +141,10 @@ function updateCartTotal() {
     }
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = '₹' + total
+
+
 }
+document.querySelector(".btn-purchase").addEventListener("click", function () {
+    window.location.replace("./checkout.html");
+  });
+  
