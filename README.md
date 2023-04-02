@@ -44,31 +44,6 @@ Home Page :
 ![Screenshot (75)](https://user-images.githubusercontent.com/80309747/229341184-f9bd70f4-3c2d-408f-b695-7f155e998528.png)
 ![Screenshot (76)](https://user-images.githubusercontent.com/80309747/229341192-45b8328b-09a8-4ded-81a2-b155d70c0ea9.png)
 
-
-
-Product Page :
-![WhatsApp Image 2023-04-02 at 8 38 53 PM](https://user-images.githubusercontent.com/80309747/229361795-e7000569-faa7-48b5-8052-8252a878f4bd.jpeg)
-
-
-
-
-
-Single Product Page :
-Single Product Page
-
-Cart Page :
-![Screenshot (79)](https://user-images.githubusercontent.com/80309747/229341610-22a24c90-4ba1-4690-942a-87fcbd4fc796.png)
-
-![Screenshot (78)](https://user-images.githubusercontent.com/80309747/229341615-a1fe39ad-2e41-4f0b-af6b-757c33c84a9a.png)
-
-
-
-Checkout Page :
-
-![Screenshot (80)](https://user-images.githubusercontent.com/80309747/229341680-7987012b-1bdc-4315-885b-b240d564b38c.png)
-
-
-
 Sign-Up Page :
 
 Singup![Screenshot (81)](https://user-images.githubusercontent.com/80309747/229341736-ad666fb7-cd6b-4f0e-9b02-f93b27f0fdf3.png)
@@ -78,6 +53,26 @@ Login Page :
 
 Login![Screenshot (82)](https://user-images.githubusercontent.com/80309747/229341765-87d0b2d1-f0a5-4700-9c22-404571c7c6b6.png)
 
+Product Page :
+![WhatsApp Image 2023-04-02 at 8 38 53 PM](https://user-images.githubusercontent.com/80309747/229361795-e7000569-faa7-48b5-8052-8252a878f4bd.jpeg)
+
+Cart Page :
+
+![Screenshot (84)](https://user-images.githubusercontent.com/80309747/229365585-17041306-23fa-4ae6-9d62-e94ee3f8ae4e.png)
+
+Checkout Page :
+
+![Screenshot (80)](https://user-images.githubusercontent.com/80309747/229341680-7987012b-1bdc-4315-885b-b240d564b38c.png)
+
+Payment Page:
+
+![WhatsApp Image 2023-04-02 at 9 49 03 PM](https://user-images.githubusercontent.com/80309747/229365618-8d7b74d7-d215-4844-807d-26ab853107eb.jpeg)
+
+
+
+
+
+
 Admin Dashboard Page :
 ![WhatsApp Image 2023-04-02 at 1 55 36 PM](https://user-images.githubusercontent.com/80309747/229348515-b4064f6c-1280-4e42-aafc-700cdc139658.jpeg)
 ![WhatsApp Image 2023-04-02 at 1 55 35 PM (1)](https://user-images.githubusercontent.com/80309747/229348578-70abf26b-15f6-49d6-95f9-59f1d9a062f0.jpeg)
@@ -86,10 +81,13 @@ Admin Dashboard Page :
 
 
 Admin Add Product Page :
+
 ![WhatsApp Image 2023-04-02 at 1 55 35 PM](https://user-images.githubusercontent.com/80309747/229348528-21301e71-5c9c-43e0-9b31-0dcb19fb26a4.jpeg)
 
 Admin  Prodcut Page
+
 ![WhatsApp Image 2023-04-02 at 1 55 34 PM (1)](https://user-images.githubusercontent.com/80309747/229348952-cb6c79b2-c08c-4414-971f-e665c4dc28fc.jpeg)
+
 
 
 
