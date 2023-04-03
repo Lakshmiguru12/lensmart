@@ -1,13 +1,7 @@
-let tbody = document.querySelector("tbody");
-let card_body = document.getElementById("orderbody");
-// let accestoken = localStorage.setItem("accestoken",1);
-let accestoken = localStorage.getItem("accestoken");
-let card = document.querySelectorAll(".card");
-let cards = [...card];
-console.log(accestoken);
+let userAuthToken = localStorage.getItem("accestoken");
 let head = document.querySelector("head");
 let body = document.querySelector("body");
-if(!accestoken){
+if(!userAuthToken){
         let style = document.createElement("style");
         style.innerHTML = `body {
               background-color: #2F3242;
@@ -118,32 +112,6 @@ if(!accestoken){
 
         //   document.getAnim
 }
-
-
-
-// event handler
-cards.forEach((ele)=>{
-    ele.addEventListener("click",()=>{
-        window.location.replace("./adminOrders.html")
-    })
-})
-fetch(`https://lensmart-backend3-0.onrender.com/product_status`)
-.then((res)=>res.json())
-.then((res)=>{
-    res.splice(0,res.length-7);
-    console.log(res)
-    
-    renderOrder(res);
-})
-
-fetch(`https://lensmart-backend3-0.onrender.com/users`)
-.then((res)=>res.json())
-.then((res)=>{
-    res.splice(0,res.length-10);
-    console.log(res)
-    
-    render(res)
-})
 // dynamic headers
 let change  = document.getElementsByClassName("card-single");
 let changes = [...change];
@@ -163,65 +131,57 @@ changes.forEach((ele,index)=>{
     })
 })
 
-// for see all buttons
-let seeall = document.getElementById("seeall");
-let seeorders = document.getElementById("seeorders");
-seeall.addEventListener("click",()=>{
-    window.location.replace("./adminUsers.html");
-})
+let userTable = document.querySelector(".table-responsive>table>tbody");
 
-seeorders.addEventListener("click",()=>{
-    window.location.replace("./adminOrders.html");
-})
-
-// <-- for displaying users in table -->
-
-
-
+fetchdata();
+function fetchdata(){
+    fetch(`https://lensmart-backend3-0.onrender.com/product_status`)
+    .then((res)=>res.json())
+    .then((res)=>{
+        console.log(res)
+        render(res);
+    })
+}
 function render(data){
     let out  = data.map((ele)=>{
-        let a = createtbody(ele.email,ele.firstname,ele.lastname,ele.username);
+        let a = createtbody(ele.frameImg,ele.discountedPrice,ele.brandName,ele.id,ele.password,ele.username);
         return a;
     })
-    tbody.innerHTML = out.join("");
+    userTable.innerHTML = out.join("");
+    let delBTN = document.getElementsByClassName("delete");
+    let deleteBTN = [...delBTN];
+    deleteBTN.forEach((ele,index)=>{
+        ele.addEventListener("click",()=>{
+            fetch(`https://lensmart-backend3-0.onrender.com/product_status/${data[index].id}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+            .then((res)=>{
+                res.json()
+            })
+            .then((res)=>{
+                console.log(res);
+                alert("Cancelled succesfully");
+                fetchdata();
+            })
+        });
+    })
 }
-
 
 // create cards 
 
-function createtbody(email,firstname,lastname,id,password,username){
+function createtbody(avatar,discountedPrice,brand,id,password,username){
     let td = `<tr>
+        <td><img src="${avatar || `./images/profileimage.jpg`}" alt="profile image"></td>
         <td>${username}</td>
-        <td>${email}</td>
-        <td>${firstname} ${lastname}</td>
+        <td>${brand}</td>
+        <td>₹ ${discountedPrice}</td>
+        <td>${password}</td>                          
+        <td>${id}</td>
+        <td><button class="delete">Cancel</button></td>
     </tr>`
     return td;
 }
 
-// processing orders
-function renderOrder(data){
-    let out  = data.map((ele)=>{
-        let a = create(ele.frameImg,ele.title,ele.id);
-        return a;
-    })
-    card_body.innerHTML = out.join("");
-}
-
-
-function create(avatar,title,id){
-    let td = `<div class="order">
-    <div class="info">
-        <img src="${avatar}" width="40px" height="40px" alt="">
-        <div>
-            <h4>${title}</h4>
-            <small>#${id}</small>
-        </div>
-    </div>
-    <div class="status">
-        <span class="las la-user-circle"></span>
-        <span class="las la-shopping-bag"></span>
-        <span class="las la-rupee-sign"></span>
-    </div>
-</div>`
-    return td;
-}

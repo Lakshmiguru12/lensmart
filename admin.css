@@ -13,6 +13,10 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+::selection {
+    background-color: var(--main-color) !important;
+    color: var(--color-dark) !important;
+}
 .sidebar{
     width: 345px;
     position: fixed;
@@ -164,6 +168,7 @@
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     justify-content: space-between;
     /* margin: 2px; */
+    cursor: pointer;
     /* background-color: #8390A2; */
     border-radius: 10px;
 }
@@ -194,6 +199,7 @@
 .card{
     background: #fff;
     border-radius: 5px;
+    cursor: pointer;
     /* padding: 2rem; */
 }
 .card-header,.card-body{

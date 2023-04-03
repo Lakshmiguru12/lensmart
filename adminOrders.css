@@ -4,7 +4,10 @@
 --color-dark: #010045;
 --text-grey: #8390A2;
 }
-
+::selection {
+    background-color: var(--main-color) !important;
+    color: var(--color-dark) !important;
+}
 *{
     padding: 0px;
     margin: 0px;
@@ -88,6 +91,8 @@
     /* width: 100vw; */
     /* width: calc(100vw - 345px); */
 }
+
+
 #secondHeader{
     background: #ffff;
     display: flex;
@@ -152,6 +157,30 @@
     background: #f5f5f5;
     min-height: calc(100vh - 90px);
 }
+
+.table-responsive>table>tbody>tr img{
+    border-radius: 5px;
+    width: 100%;
+}
+.table-responsive>table{
+    text-align: center;
+}
+.table-responsive>table>tbody>tr>td{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* margin: auto; */
+    width: 20px;
+}
+.table-responsive>table>tbody>tr>td>button{
+    background-color: red;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
 .cards{
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -165,6 +194,7 @@
     justify-content: space-between;
     /* margin: 2px; */
     /* background-color: #8390A2; */
+    cursor: pointer;
     border-radius: 10px;
 }
 
@@ -189,7 +219,6 @@
     margin-top: 3.5rem;
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: 65% auto;
 }
 .card{
     background: #fff;
@@ -232,11 +261,6 @@ td{
     font-size: 0.9rem;
     color: #222;
 }
-
-tr td:last-child{
-    display: flex;
-    align-items: center;
-}
 .order{
     display: flex;
     justify-content: space-between;
@@ -277,7 +301,7 @@ tr td:last-child{
 @media only screen and (max-width: 1200px) {
     
     .recent-grid{
-        grid-template-columns: 60% 40%; 
+        /* grid-template-columns: 60% 40%;  */
     }
     
 }
