@@ -1,445 +1,210 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./products.css">
-        <title>Products</title>
-        <style>
-            body {
-                margin: 0px;
-                padding: 0px;
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./products.css">
+    <title>Products</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
 
-            }
+        }
 
-            * {
-                box-sizing: border-box;
-            }
+        * {
+            box-sizing: border-box;
+        }
 
-            /* products data******************************************* */
-            .main {
-               
-    position: relative;
-    top: 31vh;
-    display: flex;
-    width: 95%;
-    margin: auto;
-    justify-content: space-between;
-    margin-bottom: 210px;
-            }
+        /* products data******************************************* */
+        .main {
 
-            .selector {
+            position: relative;
+            top: 31vh;
+            display: flex;
+            width: 95%;
+            margin: auto;
+            justify-content: space-between;
+            margin-bottom: 210px;
+        }
 
-                padding: 0 20px;
-                width: 25%;
-                height: 700px;
-                /* border: 2px solid red; */
-                box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-                
-   
+        .selector {
 
-            }
+            padding: 0 20px;
+            width: 25%;
+            height: 700px;
+            /* border: 2px solid red; */
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 
 
 
-            .filter_divs {
-                display: flex;
-                justify-content: space-between;
-
-                font-size: 13px;
-                text-align: center;
-            }
-
-            .filter_divs>div {
-                box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-                padding: 5px;
-                width: 70px;
-                height: 70px;
-                cursor: pointer;
-
-            }
-
-            .filter_checkbox {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .filter_checkbox>div {
-                margin-bottom: 10px;
-                font-size: 18px;
-            }
+        }
 
 
-            .selector>select {
-                width: 100%;
-                height: 50px;
+
+        .filter_divs {
+            display: flex;
+            justify-content: space-between;
+
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .filter_divs>div {
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+            padding: 5px;
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+
+        }
+
+        .filter_checkbox {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter_checkbox>div {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
 
 
-                /* text-align: center; */
-                /* margin-bottom: 5px; */
-            }
-
-            #product-container {
-                /* border: 2px solid black; */
-                width: 74%;
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-               
-                gap: 10px;
-                box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-
-                padding: 25px;
-
-            }
-
-            #product-container>div {
-                padding: 15px;
-                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            }
-
-            #product-container>div>img {
-                width: 60%;
-                display: flex;
-                margin: auto;
-                margin-top: -10px;
+        .selector>select {
+            width: 100%;
+            height: 50px;
 
 
-            }
+            /* text-align: center; */
+            /* margin-bottom: 5px; */
+        }
 
-            #product-container>div>button {
-                display: block;
-    margin: auto;
-    border-radius: 9px;
-    border: none;
-    padding: 4px 8px;
-    color: white;
-    background-color: rgb(247, 168, 21);
-    margin-top: -10px;
-    height: 28px;
-    width: 80%;
+        #product-container {
+            /* border: 2px solid black; */
+            width: 74%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
 
-            }
+            gap: 10px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 
-            #product-container>div h3 {
-                margin-top: -10px;
-                margin-bottom: 10px;
-            }
+            padding: 25px;
 
-            .price_div {
-                display: grid;
-                grid-template-columns: repeat(2, 60px);
+        }
 
-            }
+        #product-container>div {
+            padding: 15px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
 
-            .MRPprice {
-                color: rgb(130, 127, 127);
-                text-decoration: line-through;
-            }
-        </style>
-    </head>
+        #product-container>div>img {
+            width: 60%;
+            display: flex;
+            margin: auto;
+            margin-top: -10px;
 
-    <body>
-        <!-- ===> here is a navbar (3 types of navbar) -->
-        <div class="nav">
-            <!-- this is first nav -->
-            <div class="first">
-                <div class="inner">
-                    <div class="left">
-                        <a href="#"> </a>
-                        <a href="#">Do more, Be more</a> |
-                        <a href="#">Try in 3D</a> |
-                        <a href="#">Store Locator</a> |
-                        <a href="#">Quality</a> |
-                        <a href="#">USA</a> |
-                        <a href="#">Singapore</a> |
-                        <a href="#">UAE</a> |
-                        <a href="#">John Jacobs</a> |
-                        <a href="#">Aqualens</a> |
-                        <a href="#">Cobrowsing</a> |
-                        <a href="#">Engineering Blog</a> |
-                        <a href="#">Lensmart Franchise</a> |
-                        <a href="#">Lensmart Optom Partner Program</a>
-                    </div>
-                    <div class="right">
-                        <a href="#">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-            <!-- this is end of first nav -->
 
-            <!-- this is second nav -->
-            <div class="second">
-                <div class="lefty">
-                    <div class="one">
-                        <div class="img">
-                            <a href="./index.html"><img src="./index_logo/ma (1).png"
-                                    alt="logo"></a>
-                        </div>
-                    </div>
-                    <div class="two">
-                        <div id="img">
-                            <img src="https://static.lenskart.com/media/mobile/images/phone_number.svg" alt="phone_number">
-                        </div>
-                        <div class="search">
-                            <input type="search" placeholder="  What are you looking for">
-                        </div>
-                    </div>
-                </div>
-                <div class="others">
-                    <a href="#">Track Order</a>
-                    <span id="user1" onclick="showsignup()"><a id="disp-user">Sign In & Sign Up</a></span>
-                    <a href="#"> <img src="https://cdn-icons-png.flaticon.com/128/35/35538.png" alt=""> Wishlist</a>
-                    <a href="./cart.Html"> <img
-                            src="https://cdn-icons-png.flaticon.com/128/2211/2211008.png" alt="" sizes="" srcset="">
-                        Cart</a>
-                </div>
-            </div>
-            <!-- this is end of second nav -->
+        }
 
-            <!-- this is third nav -->
-            <div class="third" id="headers">
+        #product-container>div>button {
+            display: block;
+            margin: auto;
+            border-radius: 9px;
+            border: none;
+            padding: 4px 8px;
+            color: white;
+            background-color: rgb(247, 168, 21);
+            margin-top: -10px;
+            height: 28px;
+            width: 80%;
+            cursor: pointer;
+
+        }
+
+        #product-container>div h3 {
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
+        .price_div {
+            display: grid;
+            grid-template-columns: repeat(2, 60px);
+
+        }
+
+        .MRPprice {
+            color: rgb(130, 127, 127);
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===> here is a navbar (3 types of navbar) -->
+    <div class="nav">
+        <!-- this is first nav -->
+        <div class="first">
+            <div class="inner">
                 <div class="left">
-                    <!-- - - - this is dropdownn of {EYEGLASSES} starts - - - -->
-                    <h4 id="headone">EYEGLASSES</h4>
-                    <div class="droping">
-                        <div id="drop1" class="dropone">
-                            <div class="headrop">
-                                <div class="droper1">
-                                    <a href="#">SELECT CATEGORIES</a>
-                                </div>
-                                <div class="droper2">
-                                    <p>Our Top Picks</p>
-                                    <p>Frame Type</p>
-                                    <p>Collection</p>
-                                </div>
-                                <div class="droper3">
-                                    <p>brands</p>
-                                </div>
-                            </div>
-                            <div class="outer">
-                                <div class="inner">
-                                    <div class="men">
-                                        <div class="togeth">
-                                            <img src="https://static.lenskart.com/media/desktop/img/men_pic.png" alt="">
-                                            <p>Men</p>
-                                        </div>
-                                        <p> > </p>
-                                    </div>
-                                    <div class="men">
-                                        <div class="togeth">
-                                            <img src="https://static.lenskart.com/media/desktop/img/women_pic.png" alt="">
-                                            <p>Women</p>
-                                        </div>
-                                        <p> > </p>
-                                    </div>
-                                    <div class="men kids" id="kids">
-                                        <div class="togeth">
-                                            <img src="https://static.lenskart.com/media/desktop/img/kid_pic.png" alt="">
-                                            <p>Kids</p>
-                                        </div>
-                                        <p> > </p>
-                                    </div>
-                                </div>
-                                <div class="next" id="next">
-                                    <div class="para">
-                                        <p>CLASSIC EYEGLASSES</p>
-                                        <p>Starting From $1199</p>
-                                    </div>
-                                    <div class="para" id="khatam1">
-                                        <p>PREMIUM EYEGLASSES</p>
-                                        <p>Starting From $3200</p>
-                                    </div>
-                                    <div class="para" id="khatam2">
-                                        <p>COMPUTER EYEGLASSES</p>
-                                        <p>Starting From $1499</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- there are dynamic links in dropdowns {starts}-->
-                            <div class="linkers">
-                                <div class="linked">
-                                    <a id="arrivals" href="/rotten-snakes-6255/Product_Page/AllInput/ProductPage.html">New
-                                        Arrivals</a>
-                                    <a href="#">Best Seller</a>
-                                    <a href="#">Lensmart BLU Lens</a>
-                                    <a href="#">Trending</a>
-                                    <a href="#">Tinted Eyeglasses</a>
-                                    <a href="#">Computer Eyeglasses</a>
-                                    <a href="#">Progressive Eyeglasses</a>
-                                </div>
-                                <div class="linked">
-                                    <a href="#">Rectangle Frames</a>
-                                    <a href="#">Wayfarer Frames</a>
-                                    <a href="#">Round Frames</a>
-                                    <a href="#">Aviator Frames</a>
-                                    <a href="#">Cat-Eye Frames</a>
-                                    <a href="#">Rimless Frames</a>
-                                    <a href="#">Half Rim Frames</a>
-                                    <a href="#">Geometric Frames</a>
-                                </div>
-                                <div class="linked">
-                                    <a href="#">Crystal Clear</a>
-                                    <a href="#">Gradient</a>
-                                    <a href="#">Sleek Steel</a>
-                                    <a href="#">Switch - Magnetic Clips-On</a>
-                                    <a href="#">Air Flex</a>
-                                    <a href="#">Air Wrap</a>
-                                    <a href="#">Classic Acetate</a>
-                                    <a href="#">Series</a>
-                                </div>
-                                <div class="linked one">
-                                    <a href="#">Vincent Chase</a>
-                                    <a href="#">Lensmart Air</a>
-                                    <a href="#">John Jacobs</a>
-                                    <a href="#">OJOS</a>
-                                    <a href="#">New Balance</a>
-                                    <a href="#">Carrera</a>
-                                    <a href="#">Fossil</a>
-                                    <a href="#">Lensmart STUDIO</a>
-                                </div>
-                            </div>
-                            <!-- there are dynamic links in dropdowns {ends}-->
-                        </div>
-                    </div>
-                    <!----- this is dropdownn of {EYEGLASSES} ends-------->
-                    <h4 id="headtwo">COMPUTER GLASSES</h4>
-                    <!-- - - - this is dropdownn of {COMPUTER GLASSES} starts - - - -->
-                    <div class="droping">
-                        <div id="drop2" class="dropone">
-                            <div class="headrop">
-                                <div class="droper1">
-                                    <a href="#">SELECT CATEGORIES</a>
-                                </div>
-                                <div class="droper2" id="droper2">
-                                    <p id="dr1">Our Top Picks</p>
-                                    <p id="dr2">Frame Type</p>
-                                    <p id="dr3">Collection</p>
-                                </div>
-                                <div class="droper3" id="droper3">
-                                    <p id="dr4">brands</p>
-                                </div>
-                            </div>
-                            <div class="outer">
-                                <div class="inner">
-                                    <div class="men">
-                                        <div class="togeth">
-                                            <img src="https://static.lenskart.com/media/desktop/img/men_pic.png" alt="">
-                                            <p>Men</p>
-                                        </div>
-                                        <p> > </p>
-                                    </div>
-                                    <div class="men">
-                                        <div class="togeth">
-                                            <img src="https://static.lenskart.com/media/desktop/img/women_pic.png" alt="">
-                                            <p>Women</p>
-                                        </div>
-                                        <p> > </p>
-                                    </div>
-                                    <div class="men kids" id="kids">
-                                        <div class="togeth">
-                                            <img src="https://static.lenskart.com/media/desktop/img/kid_pic.png" alt="">
-                                            <p>Kids</p>
-                                        </div>
-                                        <p> > </p>
-                                    </div>
-                                </div>
-                                <div class="next">
-                                    <div class="para">
-                                        <p>Blu O Computer Glasses</p>
-                                        <p>Starting From $1499</p>
-                                    </div>
-                                    <div class="para">
-                                        <p>PREMIUM RANGE</p>
-                                        <p>Starting From $3200</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- --- this is dropdownn of {COMPUTER GLASSES} ends --- -->
-
-                    <!-- --- this is dropdownn of {KIDS GLASSES} {Stars} --- -->
-                    <h4 id="headthree">KIDS GLASSES</h4>
-                    <div class="dropone" id="drop3">
-                        <div class="threes">
-                            <div class="once">
-                                <img src="https://static1.lenskart.com/media/desktop/img/May22/glasses.jpg" alt="">
-                                <p>Eyeglasses</p>
-                            </div>
-                            <div class="once">
-                                <img src="https://static1.lenskart.com/media/desktop/img/May22/computer-glasses.jpg" alt="">
-                                <p>Zero Power Computer Glasses</p>
-                            </div>
-                            <div class="once">
-                                <img src="https://static1.lenskart.com/media/desktop/img/May22/Sunnies.jpg" alt="">
-                                <p>Sunglasses</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- --- this is dropdownn of {KIDS GLASSES} {ends} --- -->
-
-                    <!-- --- this is dropdownn of {CONTACT LENS} {start} --- -->
-                    <h4 id="headfour">CONTACT LENS</h4>
-                    <div class="dropone" id="drop4">
-                        <!-- <div class="headrop">
-                <div class="droper2" id="droper2">
-                    <p id="dr1">Our Top Picks</p>
-                    <p id="dr2">Frame Type</p>
-                    <p id="dr3">Collection</p>
+                    <a href="#"> </a>
+                    <a href="#">Do more, Be more</a> |
+                    <a href="#">Try in 3D</a> |
+                    <a href="#">Store Locator</a> |
+                    <a href="#">Quality</a> |
+                    <a href="#">USA</a> |
+                    <a href="#">Singapore</a> |
+                    <a href="#">UAE</a> |
+                    <a href="#">John Jacobs</a> |
+                    <a href="#">Aqualens</a> |
+                    <a href="#">Cobrowsing</a> |
+                    <a href="#">Engineering Blog</a> |
+                    <a href="#">Lensmart Franchise</a> |
+                    <a href="#">Lensmart Optom Partner Program</a>
                 </div>
-                <div class="droper3" id="droper3">
-                    <p id="dr4">brands</p>
+                <div class="right">
+                    <a href="#">Contact Us</a>
                 </div>
             </div>
-            <div class="linkers">
-                <div class="linked">
-                    <a id="arrivals" href="/Product_Page/AllInput/ProductPage.html">New Arrivals</a>
-                    <a href="#">Best Seller</a>
-                    <a href="#">Lenskart BLU Lens</a>
-                    <a href="#">Trending</a>
-                    <a href="#">Tinted Eyeglasses</a>
-                    <a href="#">Computer Eyeglasses</a>
-                    <a href="#">Progressive Eyeglasses</a>
-                </div>
-                <div class="linked">
-                    <a href="#">Rectangle Frames</a>
-                    <a href="#">Wayfarer Frames</a>
-                    <a href="#">Round Frames</a>
-                    <a href="#">Aviator Frames</a>
-                    <a href="#">Cat-Eye Frames</a>
-                    <a href="#">Rimless Frames</a>
-                    <a href="#">Half Rim Frames</a>
-                    <a href="#">Geometric Frames</a>
-                </div>
-                <div class="linked">
-                    <a href="#">Crystal Clear</a>
-                    <a href="#">Gradient</a>
-                    <a href="#">Sleek Steel</a>
-                    <a href="#">Switch - Magnetic Clips-On</a>
-                    <a href="#">Air Flex</a>
-                    <a href="#">Air Wrap</a>
-                    <a href="#">Classic Acetate</a>
-                    <a href="#">Series</a>
-                </div>
-                <div class="linked one">
-                    <a href="#">Vincent Chase</a>
-                    <a href="#">Lenskart Air</a>
-                    <a href="#">John Jacobs</a>
-                    <a href="#">OJOS</a>
-                    <a href="#">New Balance</a>
-                    <a href="#">Carrera</a>
-                    <a href="#">Fossil</a>
-                    <a href="#">Lenskart STUDIO</a>
-                </div>
-            </div> -->
-                    </div>
-                    <!-- --- this is dropdownn of {CONTACT LENS} {ends} --- -->
+        </div>
+        <!-- this is end of first nav -->
 
-                    <!-- --- this is dropdownn of {SUNGLASSES} {starts} --- -->
-                    <h4 id="headfive">SUNGLASSES</h4>
-                    <div class="dropone" id="drop5">
+        <!-- this is second nav -->
+        <div class="second">
+            <div class="lefty">
+                <div class="one">
+                    <div class="img">
+                        <a href="./index.html"><img src="./index_logo/ma (1).png" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="two">
+                    <div id="img">
+                        <img src="https://static.lenskart.com/media/mobile/images/phone_number.svg" alt="phone_number">
+                    </div>
+                    <div class="search">
+                        <input type="search" placeholder="  What are you looking for">
+                    </div>
+                </div>
+            </div>
+            <div class="others">
+                <a href="#">Track Order</a>
+                <span id="user1" onclick="showsignup()"><a id="disp-user">Sign In & Sign Up</a></span>
+                <a href="#"> <img src="https://cdn-icons-png.flaticon.com/128/35/35538.png" alt=""> Wishlist</a>
+                <a href="./cart.Html"> <img src="https://cdn-icons-png.flaticon.com/128/2211/2211008.png" alt=""
+                        sizes="" srcset="">
+                    Cart</a>
+            </div>
+        </div>
+        <!-- this is end of second nav -->
+
+        <!-- this is third nav -->
+        <div class="third" id="headers">
+            <div class="left">
+                <!-- - - - this is dropdownn of {EYEGLASSES} starts - - - -->
+                <h4 id="headone">EYEGLASSES</h4>
+                <div class="droping">
+                    <div id="drop1" class="dropone">
                         <div class="headrop">
                             <div class="droper1">
                                 <a href="#">SELECT CATEGORIES</a>
@@ -537,98 +302,333 @@
                         </div>
                         <!-- there are dynamic links in dropdowns {ends}-->
                     </div>
-                    <!-- --- this is dropdownn of {SUNGLASSES} {ends} --- -->
-
-                    <!-- --- this is dropdownn of {Home} {starts} --- -->
-                    <h4 id="headseven">HOME EYE-TEST</h4>
-                    <div class="dropone" id="drop7">
-                        <div class="im">
-                            <img src="https://static1.lenskart.com/media/desktop/img/HomeTryOut.png" alt="">
+                </div>
+                <!----- this is dropdownn of {EYEGLASSES} ends-------->
+                <h4 id="headtwo">COMPUTER GLASSES</h4>
+                <!-- - - - this is dropdownn of {COMPUTER GLASSES} starts - - - -->
+                <div class="droping">
+                    <div id="drop2" class="dropone">
+                        <div class="headrop">
+                            <div class="droper1">
+                                <a href="#">SELECT CATEGORIES</a>
+                            </div>
+                            <div class="droper2" id="droper2">
+                                <p id="dr1">Our Top Picks</p>
+                                <p id="dr2">Frame Type</p>
+                                <p id="dr3">Collection</p>
+                            </div>
+                            <div class="droper3" id="droper3">
+                                <p id="dr4">brands</p>
+                            </div>
+                        </div>
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="men">
+                                    <div class="togeth">
+                                        <img src="https://static.lenskart.com/media/desktop/img/men_pic.png" alt="">
+                                        <p>Men</p>
+                                    </div>
+                                    <p> > </p>
+                                </div>
+                                <div class="men">
+                                    <div class="togeth">
+                                        <img src="https://static.lenskart.com/media/desktop/img/women_pic.png" alt="">
+                                        <p>Women</p>
+                                    </div>
+                                    <p> > </p>
+                                </div>
+                                <div class="men kids" id="kids">
+                                    <div class="togeth">
+                                        <img src="https://static.lenskart.com/media/desktop/img/kid_pic.png" alt="">
+                                        <p>Kids</p>
+                                    </div>
+                                    <p> > </p>
+                                </div>
+                            </div>
+                            <div class="next">
+                                <div class="para">
+                                    <p>Blu O Computer Glasses</p>
+                                    <p>Starting From $1499</p>
+                                </div>
+                                <div class="para">
+                                    <p>PREMIUM RANGE</p>
+                                    <p>Starting From $3200</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- --- this is dropdownn of {Home} {ends} --- -->
-
-                    <h4 id="headeight">STORE LOCATOR</h4>
                 </div>
-                <div class="right">
-                    <a href="https://www.lenskart.com/compare-looks"><img
-                            src="https://static1.lenskart.com/media/desktop/img/May22/3dtryon1.png" alt=""></a>
-                    <a href="https://www.lenskart.com/eyewear/blue-cut-lenses"><img
-                            src="https://static1.lenskart.com/media/desktop/img/Mar22/13-Mar/blulogo.png" alt=""></a>
-                    <a href="https://www.lenskart.com/loyalty"><img
-                            src="https://static.lenskart.com/media/desktop/img/Feb22/18-Feb/goldlogo.jpg" alt=""></a>
+                <!-- --- this is dropdownn of {COMPUTER GLASSES} ends --- -->
+
+                <!-- --- this is dropdownn of {KIDS GLASSES} {Stars} --- -->
+                <h4 id="headthree">KIDS GLASSES</h4>
+                <div class="dropone" id="drop3">
+                    <div class="threes">
+                        <div class="once">
+                            <img src="https://static1.lenskart.com/media/desktop/img/May22/glasses.jpg" alt="">
+                            <p>Eyeglasses</p>
+                        </div>
+                        <div class="once">
+                            <img src="https://static1.lenskart.com/media/desktop/img/May22/computer-glasses.jpg" alt="">
+                            <p>Zero Power Computer Glasses</p>
+                        </div>
+                        <div class="once">
+                            <img src="https://static1.lenskart.com/media/desktop/img/May22/Sunnies.jpg" alt="">
+                            <p>Sunglasses</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- --- this is dropdownn of {KIDS GLASSES} {ends} --- -->
+
+                <!-- --- this is dropdownn of {CONTACT LENS} {start} --- -->
+                <h4 id="headfour">CONTACT LENS</h4>
+                <div class="dropone" id="drop4">
+                    <!-- <div class="headrop">
+                <div class="droper2" id="droper2">
+                    <p id="dr1">Our Top Picks</p>
+                    <p id="dr2">Frame Type</p>
+                    <p id="dr3">Collection</p>
+                </div>
+                <div class="droper3" id="droper3">
+                    <p id="dr4">brands</p>
                 </div>
             </div>
-            <!-- this is end of third nav -->
+            <div class="linkers">
+                <div class="linked">
+                    <a id="arrivals" href="/Product_Page/AllInput/ProductPage.html">New Arrivals</a>
+                    <a href="#">Best Seller</a>
+                    <a href="#">Lenskart BLU Lens</a>
+                    <a href="#">Trending</a>
+                    <a href="#">Tinted Eyeglasses</a>
+                    <a href="#">Computer Eyeglasses</a>
+                    <a href="#">Progressive Eyeglasses</a>
+                </div>
+                <div class="linked">
+                    <a href="#">Rectangle Frames</a>
+                    <a href="#">Wayfarer Frames</a>
+                    <a href="#">Round Frames</a>
+                    <a href="#">Aviator Frames</a>
+                    <a href="#">Cat-Eye Frames</a>
+                    <a href="#">Rimless Frames</a>
+                    <a href="#">Half Rim Frames</a>
+                    <a href="#">Geometric Frames</a>
+                </div>
+                <div class="linked">
+                    <a href="#">Crystal Clear</a>
+                    <a href="#">Gradient</a>
+                    <a href="#">Sleek Steel</a>
+                    <a href="#">Switch - Magnetic Clips-On</a>
+                    <a href="#">Air Flex</a>
+                    <a href="#">Air Wrap</a>
+                    <a href="#">Classic Acetate</a>
+                    <a href="#">Series</a>
+                </div>
+                <div class="linked one">
+                    <a href="#">Vincent Chase</a>
+                    <a href="#">Lenskart Air</a>
+                    <a href="#">John Jacobs</a>
+                    <a href="#">OJOS</a>
+                    <a href="#">New Balance</a>
+                    <a href="#">Carrera</a>
+                    <a href="#">Fossil</a>
+                    <a href="#">Lenskart STUDIO</a>
+                </div>
+            </div> -->
+                </div>
+                <!-- --- this is dropdownn of {CONTACT LENS} {ends} --- -->
+
+                <!-- --- this is dropdownn of {SUNGLASSES} {starts} --- -->
+                <h4 id="headfive">SUNGLASSES</h4>
+                <div class="dropone" id="drop5">
+                    <div class="headrop">
+                        <div class="droper1">
+                            <a href="#">SELECT CATEGORIES</a>
+                        </div>
+                        <div class="droper2">
+                            <p>Our Top Picks</p>
+                            <p>Frame Type</p>
+                            <p>Collection</p>
+                        </div>
+                        <div class="droper3">
+                            <p>brands</p>
+                        </div>
+                    </div>
+                    <div class="outer">
+                        <div class="inner">
+                            <div class="men">
+                                <div class="togeth">
+                                    <img src="https://static.lenskart.com/media/desktop/img/men_pic.png" alt="">
+                                    <p>Men</p>
+                                </div>
+                                <p> > </p>
+                            </div>
+                            <div class="men">
+                                <div class="togeth">
+                                    <img src="https://static.lenskart.com/media/desktop/img/women_pic.png" alt="">
+                                    <p>Women</p>
+                                </div>
+                                <p> > </p>
+                            </div>
+                            <div class="men kids" id="kids">
+                                <div class="togeth">
+                                    <img src="https://static.lenskart.com/media/desktop/img/kid_pic.png" alt="">
+                                    <p>Kids</p>
+                                </div>
+                                <p> > </p>
+                            </div>
+                        </div>
+                        <div class="next" id="next">
+                            <div class="para">
+                                <p>CLASSIC EYEGLASSES</p>
+                                <p>Starting From $1199</p>
+                            </div>
+                            <div class="para" id="khatam1">
+                                <p>PREMIUM EYEGLASSES</p>
+                                <p>Starting From $3200</p>
+                            </div>
+                            <div class="para" id="khatam2">
+                                <p>COMPUTER EYEGLASSES</p>
+                                <p>Starting From $1499</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- there are dynamic links in dropdowns {starts}-->
+                    <div class="linkers">
+                        <div class="linked">
+                            <a id="arrivals" href="/rotten-snakes-6255/Product_Page/AllInput/ProductPage.html">New
+                                Arrivals</a>
+                            <a href="#">Best Seller</a>
+                            <a href="#">Lensmart BLU Lens</a>
+                            <a href="#">Trending</a>
+                            <a href="#">Tinted Eyeglasses</a>
+                            <a href="#">Computer Eyeglasses</a>
+                            <a href="#">Progressive Eyeglasses</a>
+                        </div>
+                        <div class="linked">
+                            <a href="#">Rectangle Frames</a>
+                            <a href="#">Wayfarer Frames</a>
+                            <a href="#">Round Frames</a>
+                            <a href="#">Aviator Frames</a>
+                            <a href="#">Cat-Eye Frames</a>
+                            <a href="#">Rimless Frames</a>
+                            <a href="#">Half Rim Frames</a>
+                            <a href="#">Geometric Frames</a>
+                        </div>
+                        <div class="linked">
+                            <a href="#">Crystal Clear</a>
+                            <a href="#">Gradient</a>
+                            <a href="#">Sleek Steel</a>
+                            <a href="#">Switch - Magnetic Clips-On</a>
+                            <a href="#">Air Flex</a>
+                            <a href="#">Air Wrap</a>
+                            <a href="#">Classic Acetate</a>
+                            <a href="#">Series</a>
+                        </div>
+                        <div class="linked one">
+                            <a href="#">Vincent Chase</a>
+                            <a href="#">Lensmart Air</a>
+                            <a href="#">John Jacobs</a>
+                            <a href="#">OJOS</a>
+                            <a href="#">New Balance</a>
+                            <a href="#">Carrera</a>
+                            <a href="#">Fossil</a>
+                            <a href="#">Lensmart STUDIO</a>
+                        </div>
+                    </div>
+                    <!-- there are dynamic links in dropdowns {ends}-->
+                </div>
+                <!-- --- this is dropdownn of {SUNGLASSES} {ends} --- -->
+
+                <!-- --- this is dropdownn of {Home} {starts} --- -->
+                <h4 id="headseven">HOME EYE-TEST</h4>
+                <div class="dropone" id="drop7">
+                    <div class="im">
+                        <img src="https://static1.lenskart.com/media/desktop/img/HomeTryOut.png" alt="">
+                    </div>
+                </div>
+                <!-- --- this is dropdownn of {Home} {ends} --- -->
+
+                <h4 id="headeight">STORE LOCATOR</h4>
+            </div>
+            <div class="right">
+                <a href="https://www.lenskart.com/compare-looks"><img
+                        src="https://static1.lenskart.com/media/desktop/img/May22/3dtryon1.png" alt=""></a>
+                <a href="https://www.lenskart.com/eyewear/blue-cut-lenses"><img
+                        src="https://static1.lenskart.com/media/desktop/img/Mar22/13-Mar/blulogo.png" alt=""></a>
+                <a href="https://www.lenskart.com/loyalty"><img
+                        src="https://static.lenskart.com/media/desktop/img/Feb22/18-Feb/goldlogo.jpg" alt=""></a>
+            </div>
         </div>
-        <!-- nav bar+++++++++++++++++++++ -->
+        <!-- this is end of third nav -->
+    </div>
+    <!-- nav bar+++++++++++++++++++++ -->
 
 
-        <div class="main">
-            <div class="selector">
-                <h4>
-                    FRAME TYPE</h4>
-                <div class="filter_divs">
-                    <div id="Full_Rim">
-                        <img src="./productpageimages/FullRim.webp" alt="">
-                        <p>Full Rim</p>
-                    </div>
-                    <div id="Half_Rim">
-                        <img src="./productpageimages/HalfRim.webp" alt="">
-                        <p>Half Rim</p>
-                    </div>
-                    <div id="Rim_Less">
-                        <img src="./productpageimages/Rimless.webp" alt="">
-                        <p>Rim Less</p>
-                    </div>
+    <div class="main">
+        <div class="selector">
+            <h4>
+                FRAME TYPE</h4>
+            <div class="filter_divs">
+                <div id="Full_Rim">
+                    <img src="./productpageimages/FullRim.webp" alt="">
+                    <p>Full Rim</p>
                 </div>
-                <h4>FRAME SHAPE</h4>
-                <div class="filter_divs">
-                    <div id="Round_div">
-                        <img src="./productpageimages/Round.webp" alt="">
-                        <p>Round</p>
-                    </div>
-
+                <div id="Half_Rim">
+                    <img src="./productpageimages/HalfRim.webp" alt="">
+                    <p>Half Rim</p>
                 </div>
-                <h4>FRAME COLOR
-                </h4>
-                <div class="filter_checkbox">
-                    <div><input type="checkbox" value="Black"><label for="">Black</label></div>
-                    <div> <input type="checkbox" value="Brown"><label for="">Brown</label></div>
-                    <div> <input type="checkbox" value="Gold"><label for="">Gold</label></div>
-                    <div><input type="checkbox" value="Blue"><label for="">Blue</label></div>
-                    <div><input type="checkbox" value="Grey"><label for="">Grey</label></div>
-                    <div><input type="checkbox" value="Pink"><label for="">Pink</label></div>
+                <div id="Rim_Less">
+                    <img src="./productpageimages/Rimless.webp" alt="">
+                    <p>Rim Less</p>
                 </div>
-                <select name="BRANDS" aria-placeholder="" id="">
-                    <option value="">BRANDS </option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-                <select name="FRAME SIZE" id="">
-                    <option value="">FRAME SIZE </option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-                <select name="GENDER" id="">
-                    <option value="">GENDER </option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
+            </div>
+            <h4>FRAME SHAPE</h4>
+            <div class="filter_divs">
+                <div id="Round_div">
+                    <img src="./productpageimages/Round.webp" alt="">
+                    <p>Round</p>
+                </div>
 
             </div>
-
-            <div id="product-container">
-
+            <h4>FRAME COLOR
+            </h4>
+            <div class="filter_checkbox">
+                <div><input type="checkbox" value="Black"><label for="">Black</label></div>
+                <div> <input type="checkbox" value="Brown"><label for="">Brown</label></div>
+                <div> <input type="checkbox" value="Gold"><label for="">Gold</label></div>
+                <div><input type="checkbox" value="Blue"><label for="">Blue</label></div>
+                <div><input type="checkbox" value="Grey"><label for="">Grey</label></div>
+                <div><input type="checkbox" value="Pink"><label for="">Pink</label></div>
             </div>
+            <select name="BRANDS" aria-placeholder="" id="">
+                <option value="">BRANDS </option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+            <select name="FRAME SIZE" id="">
+                <option value="">FRAME SIZE </option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+            <select name="GENDER" id="">
+                <option value="">GENDER </option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+
         </div>
 
+        <div id="product-container">
 
-          <!---------+ here is a (* footer *) +-->
+        </div>
+    </div>
+
+
+    <!---------+ here is a (* footer *) +-->
     <div class="footer">
         <div class="marg">
             <div class="headline">
@@ -713,9 +713,9 @@
             </div>
         </div>
     </div> <!--this is (footer) close tag-->
-    </body>
+</body>
 
 
-    <script src="./products.js"></script>
+<script src="./products.js"></script>
 
-    </html>
+</html>

@@ -7,31 +7,36 @@ let overlay = document.getElementsByClassName('overlay')[0];
 let closesignin = document.querySelector('.signin-box span');
 let closeSignup = document.querySelector('.signup-box span');
 
-function showLogin(){
+function showLogin() {
     loginCard.classList.add('show-sign-in')
     overlay.classList.add('show-overlay');
     signupCard.classList.remove('show-sign-up');
 };
 
-function showsignup(){
+function showsignup() {
     loginCard.classList.remove('show-sign-in');
     signupCard.classList.add('show-sign-up');
     overlay.classList.add('show-overlay');
 };
 
-function closePopup(){
+function closePopup() {
     loginCard.classList.remove('show-sign-in');
     signupCard.classList.remove('show-sign-up');
     overlay.classList.remove('show-overlay');
 };
 
-closeSignup.addEventListener('click',()=>{
+closeSignup.addEventListener('click', () => {
     closePopup()
 });
 
-closesignin.addEventListener('click',()=>{
+closesignin.addEventListener('click', () => {
     closePopup()
 });
+
+function vamshi() {
+    window.location.replace("./products.html")
+}
+
 
 
 
