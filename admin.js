@@ -3,7 +3,9 @@ let card_body = document.getElementById("orderbody");
 // let accestoken = localStorage.setItem("accestoken",1);
 let accestoken = localStorage.getItem("accestoken");
 let card = document.querySelectorAll(".card");
+let users = document.querySelectorAll(".users");
 let cards = [...card];
+let uusers = [...users];
 console.log(accestoken);
 let head = document.querySelector("head");
 let body = document.querySelector("body");
@@ -174,6 +176,11 @@ seeorders.addEventListener("click",()=>{
     window.location.replace("./adminOrders.html");
 })
 
+uusers.forEach((ele)=>{
+  ele.addEventListener("click",()=>[
+    window.location.replace("./adminUsers.html")
+  ])
+})
 // <-- for displaying users in table -->
 
 
@@ -189,7 +196,7 @@ function render(data){
 
 // create cards 
 
-function createtbody(email,firstname,lastname,id,password,username){
+function createtbody(email,firstname,lastname,username){
     let td = `<tr>
         <td>${username}</td>
         <td>${email}</td>
