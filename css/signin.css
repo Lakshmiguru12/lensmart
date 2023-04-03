@@ -15,11 +15,12 @@
     position: fixed;
     top: 50%;
     left: 50%;
+    /* width: ; */
     transform: translate(-50%, -50%);
     z-index: -1;
     opacity: 0;
     overflow: hidden;
-    width: 30%;
+    width: 370px;
     height: auto;
     margin: 4% auto;
     background-color: #fff;
